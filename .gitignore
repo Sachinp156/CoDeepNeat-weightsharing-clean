@@ -1,0 +1,8 @@
+venv_tf2/
+venv/
+.venv/
+__pycache__/
+node_modules/
+.vscode/
+.idea/
+.DS_Store

@@ -1,0 +1,1022 @@
+DETAIL - 2025-09-15 18:29:32,007: runner started
+INFO - 2025-09-15 18:29:32,008: Hi, this is a test run.
+DETAIL - 2025-09-15 18:29:32,008: Generating 20 components
+DETAIL - 2025-09-15 18:29:34,659: KMeans generated 3 species using: [(3, 2, 4), (2, 1, 13), (2, 1, 4), (1, 0, 9), (3, 2, 0), (1, 0, 4), (2, 1, 73), (3, 2, 166), (3, 2, 46), (3, 2, 145), (3, 2, 57), (3, 2, 9), (2, 1, 64), (1, 0, 4), (2, 1, 9), (1, 0, 0), (3, 2, 58), (2, 1, 35), (1, 0, 36), (2, 1, 9)].
+DETAIL - 2025-09-15 18:29:34,659: Created 3 module species.
+DETAIL - 2025-09-15 18:29:34,659: Module species 0: [1, 2, 3, 4, 5, 6, 12, 14, 15, 16, 20]
+DETAIL - 2025-09-15 18:29:34,659: Created 3 module species.
+DETAIL - 2025-09-15 18:29:34,659: Module species 1: [8, 10]
+DETAIL - 2025-09-15 18:29:34,660: Created 3 module species.
+DETAIL - 2025-09-15 18:29:34,660: Module species 2: [7, 9, 11, 13, 17, 18, 19]
+DETAIL - 2025-09-15 18:29:34,660: Generating 5 modules
+DETAIL - 2025-09-15 18:29:34,687: KMeans generated 3 species using: [(5, 4, 100), (4, 3, 252), (3, 2, 86), (5, 4, 239), (5, 4, 408)].
+DETAIL - 2025-09-15 18:29:34,687: Created 3 blueprint species.
+DETAIL - 2025-09-15 18:29:34,687: Blueprint species 0: [2, 4]
+DETAIL - 2025-09-15 18:29:34,688: Blueprint species 1: [1, 3]
+DETAIL - 2025-09-15 18:29:34,688: Blueprint species 2: [5]
+INFO - 2025-09-15 18:29:34,688: [REGISTRY][init_pop0] entries=0
+INFO - 2025-09-15 18:29:34,689: Iterating over 2 generations
+INFO - 2025-09-15 18:29:34,689: [MAGIC-T][ON] mutations/child=1, burst_every=5, burst_range=(3, 5), pcgrad=ENABLED, ema_beta=0.5
+INFO - 2025-09-15 18:29:34,689:  -- Iterating generation 0 --
+DETAIL - 2025-09-15 18:29:34,689: Currently 20 modules, 5 blueprints, latest iteration: None
+DETAIL - 2025-09-15 18:29:34,690: Current modules: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+DETAIL - 2025-09-15 18:29:34,690: Current blueprints: [1, 2, 3, 4, 5]
+INFO - 2025-09-15 18:29:34,690: [MAGIC-T][SEARCH] generation 0 total_mutations=0 burst=False
+INFO - 2025-09-15 18:29:34,690: [POP] Created 6 individuals: [(1, 1), (2, 2), (3, 3), (4, 4), (5, 5), (6, 1)]
+DETAIL - 2025-09-15 18:29:34,690: Created individuals for blueprints: [(1, 1), (2, 2), (3, 3), (4, 4), (5, 5), (6, 1)]
+DETAIL - 2025-09-15 18:29:34,691: Starting assembling of blueprint 1.
+DETAIL - 2025-09-15 18:29:34,691: Generated assembled graph for blueprint 1: ['input-0-0', 'intermed-0-0', 'intermed-1-0', 'intermed-2-0', 'output-0-0']
+DETAIL - 2025-09-15 18:29:34,695: Added Input layer: KerasTensor(type_spec=TensorSpec(shape=(None, 32, 32, 3), dtype=tf.float32, name='input_1'), name='input_1', description="created by layer 'input_1'")
+DETAIL - 2025-09-15 18:29:34,697: [LIVE-SHARE] CREATE key=('maxpool', 3, (('padding', 'valid'), ('pool_size', 3), ('strides', 2)), (0, 'input-0#0')) name=maxpool__9505858760 layer_id=1995752594960
+DETAIL - 2025-09-15 18:29:34,706: [LIVE-SHARE] CREATE key=('bn', 3, (), (0, 'input-0#1')) name=bn__8996713808 layer_id=1995752596544
+DETAIL - 2025-09-15 18:29:35,590: [LIVE-SHARE] CREATE key=('bn', 3, (), (0, 'input-0#2')) name=bn__4223183759 layer_id=1995752599280
+DETAIL - 2025-09-15 18:29:35,600: [LIVE-SHARE] CREATE key=('bn', 3, (), (0, 'intermed-0#0')) name=bn__6944235048 layer_id=1995752603552
+DETAIL - 2025-09-15 18:29:35,608: [LIVE-SHARE] CREATE key=('bn', 3, (), (0, 'intermed-0#1')) name=bn__2673528151 layer_id=1995752602736
+DETAIL - 2025-09-15 18:29:35,616: [LIVE-SHARE] CREATE key=('bn', 3, (), (0, 'intermed-0#2')) name=bn__1887463666 layer_id=1995820964048
+DETAIL - 2025-09-15 18:29:35,624: [LIVE-SHARE] CREATE key=('conv2d', 3, (('activation', 'relu'), ('data_format', 'channels_last'), ('filters', 73), ('kernel_size', 5), ('padding', 'same'), ('strides', 1)), (2, 'intermed-1#0')) name=conv2d__9097528650 layer_id=1995820971680
+DETAIL - 2025-09-15 18:29:35,640: [LIVE-SHARE] CREATE key=('bn', 73, (), (2, 'intermed-1#1')) name=bn__372707771 layer_id=1995752596208
+DETAIL - 2025-09-15 18:29:35,647: [LIVE-SHARE] CREATE key=('maxpool', 73, (('padding', 'valid'), ('pool_size', 3), ('strides', 2)), (0, 'intermed-2#0')) name=maxpool__1609174682 layer_id=1995820962608
+DETAIL - 2025-09-15 18:29:35,650: [LIVE-SHARE] CREATE key=('maxpool', 73, (('padding', 'valid'), ('pool_size', 3), ('strides', 2)), (0, 'output-0#0')) name=maxpool__1388726969 layer_id=1995820963376
+DETAIL - 2025-09-15 18:29:35,652: [LIVE-SHARE] CREATE key=('bn', 73, (), (0, 'output-0#1')) name=bn__2979567959 layer_id=1995821110160
+DETAIL - 2025-09-15 18:29:35,661: [LIVE-SHARE] CREATE key=('bn', 73, (), (0, 'output-0#2')) name=bn__117966246 layer_id=1995821110928
+DETAIL - 2025-09-15 18:29:35,694: Starting assembling of blueprint 2.
+DETAIL - 2025-09-15 18:29:35,694: Generated assembled graph for blueprint 2: ['input-0-0', 'intermed-0-0', 'intermed-1-0', 'output-0-0']
+DETAIL - 2025-09-15 18:29:35,696: Added Input layer: KerasTensor(type_spec=TensorSpec(shape=(None, 32, 32, 3), dtype=tf.float32, name='input_2'), name='input_2', description="created by layer 'input_2'")
+DETAIL - 2025-09-15 18:29:35,697: [LIVE-SHARE] CREATE key=('bn', 3, (), (0, 'input-0#0')) name=bn__1618342801 layer_id=1995821307344
+DETAIL - 2025-09-15 18:29:35,704: [LIVE-SHARE] CREATE key=('maxpool', 3, (('padding', 'valid'), ('pool_size', 2), ('strides', 2)), (0, 'input-0#1')) name=maxpool__1189157639 layer_id=1995821309120
+DETAIL - 2025-09-15 18:29:35,707: [LIVE-SHARE] REUSE  key=('bn', 3, (), (0, 'input-0#2')) layer_id=1995752599280
+DETAIL - 2025-09-15 18:29:35,713: [LIVE-SHARE] CREATE key=('conv2d', 3, (('activation', 'relu'), ('data_format', 'channels_last'), ('filters', 87), ('kernel_size', 5), ('padding', 'same'), ('strides', 1)), (1, 'intermed-0#0')) name=conv2d__5376412789 layer_id=1995821315792
+DETAIL - 2025-09-15 18:29:35,723: [LIVE-SHARE] CREATE key=('bn', 87, (), (1, 'intermed-0#1')) name=bn__9080933305 layer_id=1995821316992
+DETAIL - 2025-09-15 18:29:35,732: [LIVE-SHARE] CREATE key=('conv2d', 87, (('activation', 'relu'), ('data_format', 'channels_last'), ('filters', 79), ('kernel_size', 5), ('padding', 'same'), ('strides', 1)), (1, 'intermed-0#2')) name=conv2d__9758482367 layer_id=1995821314688
+DETAIL - 2025-09-15 18:29:35,744: [LIVE-SHARE] CREATE key=('conv2d', 79, (('activation', 'relu'), ('data_format', 'channels_last'), ('filters', 73), ('kernel_size', 5), ('padding', 'same'), ('strides', 1)), (2, 'intermed-1#0')) name=conv2d__9442077547 layer_id=1995839708256
+DETAIL - 2025-09-15 18:29:35,754: [LIVE-SHARE] REUSE  key=('bn', 73, (), (2, 'intermed-1#1')) layer_id=1995752596208
+DETAIL - 2025-09-15 18:29:35,760: [LIVE-SHARE] REUSE  key=('maxpool', 73, (('padding', 'valid'), ('pool_size', 3), ('strides', 2)), (0, 'output-0#0')) layer_id=1995820963376
+DETAIL - 2025-09-15 18:29:35,761: [LIVE-SHARE] REUSE  key=('bn', 73, (), (0, 'output-0#1')) layer_id=1995821110160
+DETAIL - 2025-09-15 18:29:35,766: [LIVE-SHARE] REUSE  key=('bn', 73, (), (0, 'output-0#2')) layer_id=1995821110928
+DETAIL - 2025-09-15 18:29:35,786: Starting assembling of blueprint 3.
+DETAIL - 2025-09-15 18:29:35,786: Generated assembled graph for blueprint 3: ['input-0-0', 'intermed-0-0', 'output-0-0']
+DETAIL - 2025-09-15 18:29:35,788: Added Input layer: KerasTensor(type_spec=TensorSpec(shape=(None, 32, 32, 3), dtype=tf.float32, name='input_3'), name='input_3', description="created by layer 'input_3'")
+DETAIL - 2025-09-15 18:29:35,790: [LIVE-SHARE] CREATE key=('conv2d', 3, (('activation', 'relu'), ('data_format', 'channels_last'), ('filters', 73), ('kernel_size', 5), ('padding', 'same'), ('strides', 1)), (2, 'input-0#0')) name=conv2d__5453392241 layer_id=1995839703744
+DETAIL - 2025-09-15 18:29:35,796: [LIVE-SHARE] CREATE key=('bn', 73, (), (2, 'input-0#1')) name=bn__7603419000 layer_id=1995839715168
+DETAIL - 2025-09-15 18:29:35,804: [LIVE-SHARE] CREATE key=('maxpool', 73, (('padding', 'valid'), ('pool_size', 3), ('strides', 2)), (0, 'intermed-0#0')) name=maxpool__1259465447 layer_id=1995821105360
+DETAIL - 2025-09-15 18:29:35,808: [LIVE-SHARE] CREATE key=('bn', 73, (), (0, 'output-0#0')) name=bn__3872929599 layer_id=1995839816176
+DETAIL - 2025-09-15 18:29:35,816: [LIVE-SHARE] CREATE key=('maxpool', 73, (('padding', 'valid'), ('pool_size', 2), ('strides', 2)), (0, 'output-0#1')) name=maxpool__5052905457 layer_id=1995839822704
+DETAIL - 2025-09-15 18:29:35,833: Starting assembling of blueprint 4.
+DETAIL - 2025-09-15 18:29:35,834: Generated assembled graph for blueprint 4: ['input-0-0', 'intermed-0-0', 'intermed-1-0', 'intermed-2-0', 'output-0-0']
+DETAIL - 2025-09-15 18:29:35,835: Added Input layer: KerasTensor(type_spec=TensorSpec(shape=(None, 32, 32, 3), dtype=tf.float32, name='input_4'), name='input_4', description="created by layer 'input_4'")
+DETAIL - 2025-09-15 18:29:35,836: [LIVE-SHARE] CREATE key=('conv2d', 3, (('activation', 'relu'), ('data_format', 'channels_last'), ('filters', 35), ('kernel_size', 1), ('padding', 'same'), ('strides', 1)), (2, 'input-0#0')) name=conv2d__3030131392 layer_id=1995839821888
+DETAIL - 2025-09-15 18:29:35,847: [LIVE-SHARE] CREATE key=('bn', 35, (), (2, 'input-0#1')) name=bn__8057067301 layer_id=1995839828992
+DETAIL - 2025-09-15 18:29:35,855: [LIVE-SHARE] CREATE key=('bn', 35, (), (0, 'intermed-0#0')) name=bn__3710565630 layer_id=1995839872864
+DETAIL - 2025-09-15 18:29:35,864: [LIVE-SHARE] CREATE key=('bn', 35, (), (2, 'intermed-1#0')) name=bn__7965784592 layer_id=1995839870848
+DETAIL - 2025-09-15 18:29:35,871: [LIVE-SHARE] CREATE key=('maxpool', 35, (('padding', 'valid'), ('pool_size', 3), ('strides', 2)), (2, 'intermed-1#1')) name=maxpool__9631299660 layer_id=1995839880016
+DETAIL - 2025-09-15 18:29:35,874: [LIVE-SHARE] CREATE key=('conv2d', 35, (('activation', 'relu'), ('data_format', 'channels_last'), ('filters', 37), ('kernel_size', 3), ('padding', 'same'), ('strides', 1)), (2, 'intermed-1#2')) name=conv2d__218563170 layer_id=1995839875696
+DETAIL - 2025-09-15 18:29:35,885: [LIVE-SHARE] CREATE key=('maxpool', 37, (('padding', 'valid'), ('pool_size', 2), ('strides', 2)), (0, 'intermed-2#0')) name=maxpool__2572150220 layer_id=1995839986448
+DETAIL - 2025-09-15 18:29:35,887: [LIVE-SHARE] CREATE key=('maxpool', 37, (('padding', 'valid'), ('pool_size', 3), ('strides', 2)), (0, 'intermed-2#1')) name=maxpool__7241508898 layer_id=1995839989088
+DETAIL - 2025-09-15 18:29:35,892: [LIVE-SHARE] CREATE key=('conv2d', 37, (('activation', 'relu'), ('data_format', 'channels_last'), ('filters', 70), ('kernel_size', 3), ('padding', 'same'), ('strides', 1)), (1, 'output-0#0')) name=conv2d__3333764578 layer_id=1995839990192
+DETAIL - 2025-09-15 18:29:35,902: [LIVE-SHARE] CREATE key=('conv2d', 70, (('activation', 'relu'), ('data_format', 'channels_last'), ('filters', 75), ('kernel_size', 3), ('padding', 'same'), ('strides', 1)), (1, 'output-0#1')) name=conv2d__6839776845 layer_id=1995839987792
+DETAIL - 2025-09-15 18:29:35,914: [LIVE-SHARE] CREATE key=('bn', 75, (), (1, 'output-0#2')) name=bn__4220490341 layer_id=1995839994800
+DETAIL - 2025-09-15 18:29:35,939: Starting assembling of blueprint 5.
+DETAIL - 2025-09-15 18:29:35,939: Generated assembled graph for blueprint 5: ['input-0-0', 'intermed-0-0', 'intermed-1-0', 'intermed-2-0', 'output-0-0']
+DETAIL - 2025-09-15 18:29:35,940: Added Input layer: KerasTensor(type_spec=TensorSpec(shape=(None, 32, 32, 3), dtype=tf.float32, name='input_5'), name='input_5', description="created by layer 'input_5'")
+DETAIL - 2025-09-15 18:29:35,942: [LIVE-SHARE] CREATE key=('conv2d', 3, (('activation', 'relu'), ('data_format', 'channels_last'), ('filters', 87), ('kernel_size', 5), ('padding', 'same'), ('strides', 1)), (1, 'input-0#0')) name=conv2d__50520542 layer_id=1995840067696
+DETAIL - 2025-09-15 18:29:35,948: [LIVE-SHARE] CREATE key=('bn', 87, (), (1, 'input-0#1')) name=bn__2281631968 layer_id=1995840074512
+DETAIL - 2025-09-15 18:29:35,957: [LIVE-SHARE] CREATE key=('conv2d', 87, (('activation', 'relu'), ('data_format', 'channels_last'), ('filters', 79), ('kernel_size', 5), ('padding', 'same'), ('strides', 1)), (1, 'input-0#2')) name=conv2d__5101746366 layer_id=1995840075280
+DETAIL - 2025-09-15 18:29:35,966: [LIVE-SHARE] CREATE key=('conv2d', 79, (('activation', 'relu'), ('data_format', 'channels_last'), ('filters', 54), ('kernel_size', 1), ('padding', 'same'), ('strides', 1)), (2, 'intermed-0#0')) name=conv2d__5024160354 layer_id=1995840074416
+DETAIL - 2025-09-15 18:29:35,976: [LIVE-SHARE] CREATE key=('maxpool', 54, (('padding', 'valid'), ('pool_size', 2), ('strides', 2)), (2, 'intermed-0#1')) name=maxpool__1078254038 layer_id=1995840168448
+DETAIL - 2025-09-15 18:29:35,980: [LIVE-SHARE] CREATE key=('bn', 54, (), (2, 'intermed-0#2')) name=bn__9239330723 layer_id=1995840171664
+DETAIL - 2025-09-15 18:29:35,987: [LIVE-SHARE] CREATE key=('maxpool', 54, (('padding', 'valid'), ('pool_size', 2), ('strides', 2)), (0, 'intermed-1#0')) name=maxpool__9436623328 layer_id=1995840166000
+DETAIL - 2025-09-15 18:29:35,990: [LIVE-SHARE] CREATE key=('conv2d', 54, (('activation', 'relu'), ('data_format', 'channels_last'), ('filters', 35), ('kernel_size', 1), ('padding', 'same'), ('strides', 1)), (2, 'intermed-2#0')) name=conv2d__3233718614 layer_id=1995840174784
+DETAIL - 2025-09-15 18:29:36,000: [LIVE-SHARE] CREATE key=('bn', 35, (), (2, 'intermed-2#1')) name=bn__882813939 layer_id=1995840165424
+DETAIL - 2025-09-15 18:29:36,009: [LIVE-SHARE] CREATE key=('conv2d', 35, (('activation', 'relu'), ('data_format', 'channels_last'), ('filters', 70), ('kernel_size', 3), ('padding', 'same'), ('strides', 1)), (1, 'output-0#0')) name=conv2d__9626198598 layer_id=1995840175552
+DETAIL - 2025-09-15 18:29:36,017: [LIVE-SHARE] REUSE  key=('conv2d', 70, (('activation', 'relu'), ('data_format', 'channels_last'), ('filters', 75), ('kernel_size', 3), ('padding', 'same'), ('strides', 1)), (1, 'output-0#1')) layer_id=1995839987792
+DETAIL - 2025-09-15 18:29:36,022: [LIVE-SHARE] REUSE  key=('bn', 75, (), (1, 'output-0#2')) layer_id=1995839994800
+DETAIL - 2025-09-15 18:29:36,042: Starting assembling of blueprint 1.
+DETAIL - 2025-09-15 18:29:36,042: Generated assembled graph for blueprint 1: ['input-0-0', 'intermed-0-0', 'intermed-1-0', 'intermed-2-0', 'output-0-0']
+DETAIL - 2025-09-15 18:29:36,079: Added Input layer: KerasTensor(type_spec=TensorSpec(shape=(None, 32, 32, 3), dtype=tf.float32, name='input_1'), name='input_1', description="created by layer 'input_1'")
+DETAIL - 2025-09-15 18:29:36,079: [LIVE-SHARE] REUSE  key=('maxpool', 3, (('padding', 'valid'), ('pool_size', 3), ('strides', 2)), (0, 'input-0#0')) layer_id=1995752594960
+DETAIL - 2025-09-15 18:29:36,082: [LIVE-SHARE] REUSE  key=('bn', 3, (), (0, 'input-0#1')) layer_id=1995752596544
+DETAIL - 2025-09-15 18:29:36,091: [LIVE-SHARE] REUSE  key=('bn', 3, (), (0, 'input-0#2')) layer_id=1995752599280
+DETAIL - 2025-09-15 18:29:36,097: [LIVE-SHARE] REUSE  key=('bn', 3, (), (0, 'intermed-0#0')) layer_id=1995752603552
+DETAIL - 2025-09-15 18:29:36,103: [LIVE-SHARE] REUSE  key=('bn', 3, (), (0, 'intermed-0#1')) layer_id=1995752602736
+DETAIL - 2025-09-15 18:29:36,109: [LIVE-SHARE] REUSE  key=('bn', 3, (), (0, 'intermed-0#2')) layer_id=1995820964048
+DETAIL - 2025-09-15 18:29:36,114: [LIVE-SHARE] REUSE  key=('conv2d', 3, (('activation', 'relu'), ('data_format', 'channels_last'), ('filters', 73), ('kernel_size', 5), ('padding', 'same'), ('strides', 1)), (2, 'intermed-1#0')) layer_id=1995820971680
+DETAIL - 2025-09-15 18:29:36,117: [LIVE-SHARE] REUSE  key=('bn', 73, (), (2, 'intermed-1#1')) layer_id=1995752596208
+DETAIL - 2025-09-15 18:29:36,122: [LIVE-SHARE] REUSE  key=('maxpool', 73, (('padding', 'valid'), ('pool_size', 3), ('strides', 2)), (0, 'intermed-2#0')) layer_id=1995820962608
+DETAIL - 2025-09-15 18:29:36,124: [LIVE-SHARE] REUSE  key=('maxpool', 73, (('padding', 'valid'), ('pool_size', 3), ('strides', 2)), (0, 'output-0#0')) layer_id=1995820963376
+DETAIL - 2025-09-15 18:29:36,127: [LIVE-SHARE] REUSE  key=('bn', 73, (), (0, 'output-0#1')) layer_id=1995821110160
+DETAIL - 2025-09-15 18:29:36,131: [LIVE-SHARE] REUSE  key=('bn', 73, (), (0, 'output-0#2')) layer_id=1995821110928
+INFO - 2025-09-15 18:29:36,410: [SYNC] Iterating fitness (parallel-style) over 6 individuals
+DETAIL - 2025-09-15 18:29:39,056: [GRAD-CONFLICT] Overall conflict: 52.63% (20/38).
+DETAIL - 2025-09-15 18:29:39,151: [PCGRAD][ACTIVE] projected=40/76 (frac=0.53), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:29:39,152: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-3.617e-14 mean_dot_after=-3.08e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:39,153: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=2 (66.67%) neg_after=1 (33.33%) fixed=1 mean_dot_before=-6.511e-09 mean_dot_after=4.258e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:39,153: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-2.864e-14 mean_dot_after=-2.394e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:39,153: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-8.041e-09 mean_dot_after=4.088e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:39,153: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.009003 mean_dot_after=0.004481 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:39,154: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-3.665 mean_dot_after=3.559 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:39,154: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=2 (66.67%) neg_after=2 (66.67%) fixed=0 mean_dot_before=-1.155e-15 mean_dot_after=-1.097e-15 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:39,154: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=1.955e-09 mean_dot_after=1.955e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:39,154: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=0.001444 mean_dot_after=0.002666 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:39,156: [PCGRAD][AUDIT] layer=conv2d__6839776845 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.01676 mean_dot_after=0.01676 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:39,156: [PCGRAD][AUDIT] layer=bn__4220490341 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.001097 mean_dot_after=0.001097 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:39,157: [PCGRAD][AUDIT][GLOBAL] pairs=19 neg_before=10 (52.63%) \u2192 neg_after=5 (26.32%); fixed=5
+DETAIL - 2025-09-15 18:29:41,443: [GRAD-CONFLICT] Overall conflict: 44.74% (17/38).
+DETAIL - 2025-09-15 18:29:41,529: [PCGRAD][ACTIVE] projected=34/76 (frac=0.45), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:29:41,531: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=7.445e-14 mean_dot_after=7.445e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:41,531: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=8.845e-09 mean_dot_after=1.367e-08 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:41,531: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-2.744e-13 mean_dot_after=1.185e-13 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:41,532: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-1.895e-09 mean_dot_after=1.711e-11 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:41,532: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.002004 mean_dot_after=0.0001248 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:41,532: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-2.893 mean_dot_after=2.829 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:41,532: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=1 (33.33%) neg_after=1 (33.33%) fixed=0 mean_dot_before=2.353e-15 mean_dot_after=2.384e-15 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:41,534: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=1.988e-09 mean_dot_after=1.988e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:41,534: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=0.001596 mean_dot_after=0.00371 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:41,535: [PCGRAD][AUDIT] layer=conv2d__6839776845 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.01343 mean_dot_after=0.01343 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:41,535: [PCGRAD][AUDIT] layer=bn__4220490341 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.0004493 mean_dot_after=0.002288 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:41,536: [PCGRAD][AUDIT][GLOBAL] pairs=19 neg_before=9 (47.37%) \u2192 neg_after=1 (5.26%); fixed=8
+DETAIL - 2025-09-15 18:29:43,678: [GRAD-CONFLICT] Overall conflict: 50.00% (19/38).
+DETAIL - 2025-09-15 18:29:43,804: [PCGRAD][ACTIVE] projected=38/76 (frac=0.50), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:29:43,805: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-4.299e-15 mean_dot_after=4.95e-15 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:43,806: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=5.469e-09 mean_dot_after=7.142e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:43,806: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-1.263e-14 mean_dot_after=-8.348e-15 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:43,806: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=9.253e-09 mean_dot_after=9.253e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:43,808: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.01079 mean_dot_after=0.01079 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:43,808: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.1078 mean_dot_after=0.1082 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:43,808: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=1 (33.33%) neg_after=1 (33.33%) fixed=0 mean_dot_before=1.223e-15 mean_dot_after=1.253e-15 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:43,809: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=1.151e-09 mean_dot_after=5.21e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:43,809: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=0.001531 mean_dot_after=0.007792 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:43,809: [PCGRAD][AUDIT] layer=conv2d__6839776845 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.02179 mean_dot_after=0.0224 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:43,810: [PCGRAD][AUDIT] layer=bn__4220490341 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.001753 mean_dot_after=0.002929 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:43,810: [PCGRAD][AUDIT][GLOBAL] pairs=19 neg_before=10 (52.63%) \u2192 neg_after=2 (10.53%); fixed=8
+INFO - 2025-09-15 18:29:43,889: [SYNC] epoch 1/2 step 3/15 acc(model0)=None
+DETAIL - 2025-09-15 18:29:45,839: [GRAD-CONFLICT] Overall conflict: 57.89% (22/38).
+DETAIL - 2025-09-15 18:29:45,930: [PCGRAD][ACTIVE] projected=44/76 (frac=0.58), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:29:45,930: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=4.366e-14 mean_dot_after=4.368e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:45,931: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=6.54e-09 mean_dot_after=6.56e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:45,931: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-3.552e-14 mean_dot_after=-2.94e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:45,932: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=3.949e-10 mean_dot_after=3.949e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:45,932: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=8.482e-06 mean_dot_after=0.000676 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:45,932: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.711 mean_dot_after=0.7056 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:45,933: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=2 (66.67%) neg_after=2 (66.67%) fixed=0 mean_dot_before=-1.2e-15 mean_dot_after=-1.15e-15 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:45,933: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=1.005e-09 mean_dot_after=2.731e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:45,933: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=5.648e-05 mean_dot_after=0.003596 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:45,934: [PCGRAD][AUDIT] layer=conv2d__6839776845 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.0531 mean_dot_after=0.05356 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:45,934: [PCGRAD][AUDIT] layer=bn__4220490341 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.002178 mean_dot_after=0.002178 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:45,934: [PCGRAD][AUDIT][GLOBAL] pairs=19 neg_before=9 (47.37%) \u2192 neg_after=3 (15.79%); fixed=6
+DETAIL - 2025-09-15 18:29:47,951: [GRAD-CONFLICT] Overall conflict: 55.26% (21/38).
+DETAIL - 2025-09-15 18:29:48,039: [PCGRAD][ACTIVE] projected=42/76 (frac=0.55), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:29:48,041: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=1.7e-14 mean_dot_after=1.711e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:48,041: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=1.188e-09 mean_dot_after=1.634e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:48,041: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-2.215e-13 mean_dot_after=-1.327e-13 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:48,042: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=1.162e-09 mean_dot_after=1.162e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:48,042: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.0009969 mean_dot_after=0.001351 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:48,042: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.175 mean_dot_after=0.1749 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:48,042: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=1 (33.33%) neg_after=1 (33.33%) fixed=0 mean_dot_before=1.746e-15 mean_dot_after=1.783e-15 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:48,042: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=6.44e-10 mean_dot_after=1.699e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:48,043: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.002296 mean_dot_after=0.004146 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:48,043: [PCGRAD][AUDIT] layer=conv2d__6839776845 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.05338 mean_dot_after=0.0533 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:48,044: [PCGRAD][AUDIT] layer=bn__4220490341 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.00126 mean_dot_after=0.001234 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:48,044: [PCGRAD][AUDIT][GLOBAL] pairs=19 neg_before=8 (42.11%) \u2192 neg_after=2 (10.53%); fixed=6
+DETAIL - 2025-09-15 18:29:50,069: [GRAD-CONFLICT] Overall conflict: 47.37% (18/38).
+DETAIL - 2025-09-15 18:29:50,215: [PCGRAD][ACTIVE] projected=36/76 (frac=0.47), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:29:50,216: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=9.788e-14 mean_dot_after=9.799e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:50,216: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=5.744e-09 mean_dot_after=8.47e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:50,217: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-5.994e-16 mean_dot_after=1.423e-15 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:50,217: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-4.783e-10 mean_dot_after=4.424e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:50,217: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.0001862 mean_dot_after=0.0007685 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:50,217: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.2809 mean_dot_after=0.2804 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:50,218: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=1 (33.33%) neg_after=1 (33.33%) fixed=0 mean_dot_before=-3.528e-16 mean_dot_after=-3.274e-16 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:50,218: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=2.198e-10 mean_dot_after=3.961e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:50,218: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=3 (100.00%) neg_after=0 (0.00%) fixed=3 mean_dot_before=-0.0005606 mean_dot_after=0.001126 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:50,219: [PCGRAD][AUDIT] layer=conv2d__6839776845 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.001997 mean_dot_after=0.001997 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:50,219: [PCGRAD][AUDIT] layer=bn__4220490341 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.001777 mean_dot_after=0.001793 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:50,220: [PCGRAD][AUDIT][GLOBAL] pairs=19 neg_before=10 (52.63%) \u2192 neg_after=1 (5.26%); fixed=9
+INFO - 2025-09-15 18:29:50,297: [SYNC] epoch 1/2 step 6/15 acc(model0)=None
+DETAIL - 2025-09-15 18:29:52,251: [GRAD-CONFLICT] Overall conflict: 68.42% (26/38).
+DETAIL - 2025-09-15 18:29:52,344: [PCGRAD][ACTIVE] projected=52/76 (frac=0.68), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:29:52,345: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-1.54e-14 mean_dot_after=-1.459e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:52,345: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=7.425e-09 mean_dot_after=7.472e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:52,345: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-8.759e-15 mean_dot_after=-8.202e-15 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:52,346: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-1.605e-09 mean_dot_after=1.492e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:52,346: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.001451 mean_dot_after=0.001639 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:52,346: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.8505 mean_dot_after=0.8434 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:52,347: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=2 (66.67%) neg_after=2 (66.67%) fixed=0 mean_dot_before=-5.556e-16 mean_dot_after=-4.423e-16 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:52,347: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=3 (100.00%) neg_after=0 (0.00%) fixed=3 mean_dot_before=-2.386e-09 mean_dot_after=2.145e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:52,347: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=3 (100.00%) neg_after=0 (0.00%) fixed=3 mean_dot_before=-0.002641 mean_dot_after=0.002392 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:52,348: [PCGRAD][AUDIT] layer=conv2d__6839776845 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.04826 mean_dot_after=0.04821 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:52,349: [PCGRAD][AUDIT] layer=bn__4220490341 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.0005583 mean_dot_after=0.001731 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:52,349: [PCGRAD][AUDIT][GLOBAL] pairs=19 neg_before=14 (73.68%) \u2192 neg_after=4 (21.05%); fixed=10
+DETAIL - 2025-09-15 18:29:54,379: [GRAD-CONFLICT] Overall conflict: 34.21% (13/38).
+DETAIL - 2025-09-15 18:29:54,460: [PCGRAD][ACTIVE] projected=26/76 (frac=0.34), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:29:54,462: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=1.287e-13 mean_dot_after=1.287e-13 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:54,462: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=5.328e-09 mean_dot_after=5.328e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:54,462: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-2.485e-14 mean_dot_after=-2.235e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:54,463: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=6.035e-10 mean_dot_after=6.035e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:54,463: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.0007652 mean_dot_after=0.0007652 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:54,463: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.4294 mean_dot_after=0.4303 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:54,464: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=2 (66.67%) neg_after=2 (66.67%) fixed=0 mean_dot_before=1.713e-16 mean_dot_after=2.179e-16 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:54,464: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=3.442e-10 mean_dot_after=6.399e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:54,464: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=0.001123 mean_dot_after=0.001655 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:54,465: [PCGRAD][AUDIT] layer=conv2d__6839776845 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.03546 mean_dot_after=0.03544 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:54,465: [PCGRAD][AUDIT] layer=bn__4220490341 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.0003886 mean_dot_after=0.000388 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:54,465: [PCGRAD][AUDIT][GLOBAL] pairs=19 neg_before=8 (42.11%) \u2192 neg_after=3 (15.79%); fixed=5
+DETAIL - 2025-09-15 18:29:56,687: [GRAD-CONFLICT] Overall conflict: 47.37% (18/38).
+DETAIL - 2025-09-15 18:29:56,837: [PCGRAD][ACTIVE] projected=38/76 (frac=0.50), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:29:56,839: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=1.884e-14 mean_dot_after=1.887e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:56,839: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=3 (100.00%) neg_after=1 (33.33%) fixed=2 mean_dot_before=-6.184e-10 mean_dot_after=7.827e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:56,840: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=2.214e-14 mean_dot_after=2.231e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:56,840: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=1.137e-09 mean_dot_after=1.137e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:56,840: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.0012 mean_dot_after=0.0012 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:56,840: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.2159 mean_dot_after=0.2159 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:56,841: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=2 (66.67%) neg_after=2 (66.67%) fixed=0 mean_dot_before=-6.195e-16 mean_dot_after=-5.858e-16 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:56,841: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=2 (66.67%) neg_after=1 (33.33%) fixed=1 mean_dot_before=-1.151e-09 mean_dot_after=1.202e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:56,841: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=3 (100.00%) neg_after=0 (0.00%) fixed=3 mean_dot_before=-0.00188 mean_dot_after=0.001914 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:56,843: [PCGRAD][AUDIT] layer=conv2d__6839776845 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.0538 mean_dot_after=0.0538 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:56,843: [PCGRAD][AUDIT] layer=bn__4220490341 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.000327 mean_dot_after=0.0006453 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:56,843: [PCGRAD][AUDIT][GLOBAL] pairs=19 neg_before=12 (63.16%) \u2192 neg_after=4 (21.05%); fixed=8
+INFO - 2025-09-15 18:29:56,924: [SYNC] epoch 1/2 step 9/15 acc(model0)=None
+DETAIL - 2025-09-15 18:29:59,038: [GRAD-CONFLICT] Overall conflict: 52.63% (20/38).
+DETAIL - 2025-09-15 18:29:59,125: [PCGRAD][ACTIVE] projected=39/76 (frac=0.51), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:29:59,126: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-2.597e-14 mean_dot_after=-2.453e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:59,126: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=6.969e-10 mean_dot_after=1.307e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:59,126: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-2.895e-14 mean_dot_after=-2.685e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:59,128: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-2.009e-10 mean_dot_after=1.994e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:59,128: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.0001811 mean_dot_after=0.0002662 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:59,128: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.2126 mean_dot_after=0.2126 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:59,129: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=2 (66.67%) neg_after=2 (66.67%) fixed=0 mean_dot_before=-1.324e-15 mean_dot_after=-1.275e-15 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:59,129: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-1.358e-11 mean_dot_after=1.65e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:59,129: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-0.0003186 mean_dot_after=0.0006256 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:59,130: [PCGRAD][AUDIT] layer=conv2d__6839776845 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.00868 mean_dot_after=0.00868 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:59,130: [PCGRAD][AUDIT] layer=bn__4220490341 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.0002367 mean_dot_after=0.001438 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:29:59,130: [PCGRAD][AUDIT][GLOBAL] pairs=19 neg_before=12 (63.16%) \u2192 neg_after=4 (21.05%); fixed=8
+DETAIL - 2025-09-15 18:30:01,233: [GRAD-CONFLICT] Overall conflict: 47.37% (18/38).
+DETAIL - 2025-09-15 18:30:01,315: [PCGRAD][ACTIVE] projected=36/76 (frac=0.47), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:30:01,316: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-3.341e-14 mean_dot_after=-3.1e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:01,317: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-3.302e-09 mean_dot_after=3.415e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:01,317: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-2.382e-15 mean_dot_after=-1.517e-15 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:01,317: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=2.243e-09 mean_dot_after=2.243e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:01,317: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.002413 mean_dot_after=0.002413 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:01,318: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.1587 mean_dot_after=0.1587 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:01,318: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=2 (66.67%) neg_after=2 (66.67%) fixed=0 mean_dot_before=-1.966e-17 mean_dot_after=2.948e-17 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:01,318: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-5.55e-10 mean_dot_after=7.253e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:01,319: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=6.798e-05 mean_dot_after=0.001894 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:01,320: [PCGRAD][AUDIT] layer=conv2d__6839776845 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.005486 mean_dot_after=0.005486 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:01,320: [PCGRAD][AUDIT] layer=bn__4220490341 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.0003128 mean_dot_after=0.000322 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:01,320: [PCGRAD][AUDIT][GLOBAL] pairs=19 neg_before=9 (47.37%) \u2192 neg_after=4 (21.05%); fixed=5
+DETAIL - 2025-09-15 18:30:03,490: [GRAD-CONFLICT] Overall conflict: 47.37% (18/38).
+DETAIL - 2025-09-15 18:30:03,619: [PCGRAD][ACTIVE] projected=36/76 (frac=0.47), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:30:03,621: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-1.013e-14 mean_dot_after=-6.723e-15 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:03,621: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=1 (33.33%) neg_after=1 (33.33%) fixed=0 mean_dot_before=4.598e-09 mean_dot_after=4.912e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:03,621: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-3.935e-14 mean_dot_after=-3.184e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:03,621: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=4.885e-09 mean_dot_after=4.885e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:03,621: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.004883 mean_dot_after=0.004883 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:03,622: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.5084 mean_dot_after=0.5086 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:03,622: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=2 (66.67%) neg_after=2 (66.67%) fixed=0 mean_dot_before=2.072e-16 mean_dot_after=2.543e-16 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:03,623: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-4.939e-10 mean_dot_after=1.409e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:03,623: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=0.0002229 mean_dot_after=0.002095 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:03,624: [PCGRAD][AUDIT] layer=conv2d__6839776845 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.002138 mean_dot_after=0.002138 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:03,624: [PCGRAD][AUDIT] layer=bn__4220490341 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.0005836 mean_dot_after=0.0005836 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:03,624: [PCGRAD][AUDIT][GLOBAL] pairs=19 neg_before=10 (52.63%) \u2192 neg_after=5 (26.32%); fixed=5
+INFO - 2025-09-15 18:30:03,701: [SYNC] epoch 1/2 step 12/15 acc(model0)=None
+DETAIL - 2025-09-15 18:30:05,728: [GRAD-CONFLICT] Overall conflict: 63.16% (24/38).
+DETAIL - 2025-09-15 18:30:05,819: [PCGRAD][ACTIVE] projected=49/76 (frac=0.64), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:30:05,820: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-6.81e-14 mean_dot_after=-2.081e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:05,821: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=2.024e-09 mean_dot_after=3.026e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:05,821: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-1.051e-13 mean_dot_after=-8.746e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:05,821: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-1.205e-09 mean_dot_after=2.236e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:05,822: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.001307 mean_dot_after=0.0002788 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:05,822: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.008017 mean_dot_after=0.007886 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:05,823: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=1 (33.33%) neg_after=1 (33.33%) fixed=0 mean_dot_before=1.627e-15 mean_dot_after=1.652e-15 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:05,823: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-3.569e-10 mean_dot_after=3.641e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:05,823: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-0.001618 mean_dot_after=0.003353 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:05,824: [PCGRAD][AUDIT] layer=conv2d__6839776845 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.02496 mean_dot_after=0.02494 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:05,824: [PCGRAD][AUDIT] layer=bn__4220490341 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.007819 mean_dot_after=0.007311 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:05,824: [PCGRAD][AUDIT][GLOBAL] pairs=19 neg_before=12 (63.16%) \u2192 neg_after=3 (15.79%); fixed=9
+DETAIL - 2025-09-15 18:30:07,879: [GRAD-CONFLICT] Overall conflict: 39.47% (15/38).
+DETAIL - 2025-09-15 18:30:07,996: [PCGRAD][ACTIVE] projected=29/76 (frac=0.38), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:30:07,998: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-3.197e-14 mean_dot_after=-2.435e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:07,998: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-2.004e-09 mean_dot_after=2.1e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:07,999: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=3.933e-14 mean_dot_after=3.97e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:07,999: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-2.468e-09 mean_dot_after=6.416e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:07,999: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.002391 mean_dot_after=0.0006973 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:08,000: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.4471 mean_dot_after=0.4471 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:08,000: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=2.258e-15 mean_dot_after=2.259e-15 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:08,001: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=3.24e-11 mean_dot_after=1.449e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:08,001: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.0001697 mean_dot_after=0.002556 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:08,002: [PCGRAD][AUDIT] layer=conv2d__6839776845 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.006344 mean_dot_after=0.006344 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:08,002: [PCGRAD][AUDIT] layer=bn__4220490341 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.001679 mean_dot_after=0.002392 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:08,002: [PCGRAD][AUDIT][GLOBAL] pairs=19 neg_before=7 (36.84%) \u2192 neg_after=1 (5.26%); fixed=6
+DETAIL - 2025-09-15 18:30:10,126: [GRAD-CONFLICT] Overall conflict: 47.37% (18/38).
+DETAIL - 2025-09-15 18:30:10,259: [PCGRAD][ACTIVE] projected=36/76 (frac=0.47), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:30:10,261: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-5.378e-14 mean_dot_after=-4.463e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:10,262: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-1.759e-09 mean_dot_after=1.277e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:10,262: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=4.528e-14 mean_dot_after=4.528e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:10,262: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=5.376e-11 mean_dot_after=5.376e-11 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:10,263: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.0003355 mean_dot_after=0.0003355 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:10,263: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.2551 mean_dot_after=0.254 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:10,263: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=1 (33.33%) neg_after=1 (33.33%) fixed=0 mean_dot_before=1.211e-15 mean_dot_after=1.218e-15 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:10,264: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=3 (100.00%) neg_after=0 (0.00%) fixed=3 mean_dot_before=-8.449e-11 mean_dot_after=8.457e-11 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:10,264: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=0.001133 mean_dot_after=0.001619 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:10,265: [PCGRAD][AUDIT] layer=conv2d__6839776845 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.02153 mean_dot_after=0.02153 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:10,265: [PCGRAD][AUDIT] layer=bn__4220490341 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.002217 mean_dot_after=0.00244 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:10,265: [PCGRAD][AUDIT][GLOBAL] pairs=19 neg_before=9 (47.37%) \u2192 neg_after=2 (10.53%); fixed=7
+INFO - 2025-09-15 18:30:10,344: [SYNC] epoch 1/2 step 15/15 acc(model0)=None
+INFO - 2025-09-15 18:30:12,309: [SYNC] epoch 1 val_accuracy=0.1003
+DETAIL - 2025-09-15 18:30:14,647: [GRAD-CONFLICT] Overall conflict: 60.53% (23/38).
+DETAIL - 2025-09-15 18:30:14,772: [PCGRAD][ACTIVE] projected=46/76 (frac=0.61), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:30:14,774: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-7.593e-14 mean_dot_after=-5.982e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:14,774: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-8.374e-10 mean_dot_after=4.746e-11 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:14,774: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=2.741e-17 mean_dot_after=2.095e-15 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:14,776: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-4.514e-09 mean_dot_after=1.654e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:14,776: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.004524 mean_dot_after=0.0002281 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:14,777: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-1.332 mean_dot_after=1.251 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:14,777: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=1 (33.33%) neg_after=1 (33.33%) fixed=0 mean_dot_before=4.325e-16 mean_dot_after=4.433e-16 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:14,777: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=2 (66.67%) neg_after=1 (33.33%) fixed=1 mean_dot_before=-6.195e-10 mean_dot_after=5.846e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:14,777: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-0.0004014 mean_dot_after=0.003927 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:14,778: [PCGRAD][AUDIT] layer=conv2d__6839776845 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.03169 mean_dot_after=0.03169 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:14,779: [PCGRAD][AUDIT] layer=bn__4220490341 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.001379 mean_dot_after=0.001775 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:14,779: [PCGRAD][AUDIT][GLOBAL] pairs=19 neg_before=11 (57.89%) \u2192 neg_after=3 (15.79%); fixed=8
+DETAIL - 2025-09-15 18:30:17,016: [GRAD-CONFLICT] Overall conflict: 50.00% (19/38).
+DETAIL - 2025-09-15 18:30:17,104: [PCGRAD][ACTIVE] projected=38/76 (frac=0.50), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:30:17,107: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-3.25e-15 mean_dot_after=-2.923e-15 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:17,108: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=3 (100.00%) neg_after=1 (33.33%) fixed=2 mean_dot_before=-3.153e-09 mean_dot_after=1.843e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:17,108: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-1.917e-14 mean_dot_after=-1.761e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:17,108: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=5.427e-10 mean_dot_after=5.427e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:17,109: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.0003377 mean_dot_after=0.0006499 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:17,109: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.6524 mean_dot_after=0.643 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:17,110: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=1.18e-15 mean_dot_after=1.181e-15 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:17,110: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-6.128e-12 mean_dot_after=5.455e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:17,111: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=3 (100.00%) neg_after=0 (0.00%) fixed=3 mean_dot_before=-0.001345 mean_dot_after=0.001832 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:17,112: [PCGRAD][AUDIT] layer=conv2d__6839776845 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.00179 mean_dot_after=0.00179 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:17,113: [PCGRAD][AUDIT] layer=bn__4220490341 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.0005535 mean_dot_after=0.0009973 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:17,113: [PCGRAD][AUDIT][GLOBAL] pairs=19 neg_before=11 (57.89%) \u2192 neg_after=3 (15.79%); fixed=8
+DETAIL - 2025-09-15 18:30:19,374: [GRAD-CONFLICT] Overall conflict: 55.26% (21/38).
+DETAIL - 2025-09-15 18:30:19,544: [PCGRAD][ACTIVE] projected=46/76 (frac=0.61), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:30:19,546: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=6.512e-14 mean_dot_after=6.512e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:19,547: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=2 (66.67%) neg_after=1 (33.33%) fixed=1 mean_dot_before=-3.727e-09 mean_dot_after=5.597e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:19,547: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=2.654e-16 mean_dot_after=4.801e-15 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:19,547: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-4.511e-10 mean_dot_after=4.336e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:19,547: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-5.702e-06 mean_dot_after=0.0007509 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:19,548: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.1709 mean_dot_after=0.1715 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:19,548: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=2 (66.67%) neg_after=2 (66.67%) fixed=0 mean_dot_before=-1.449e-16 mean_dot_after=-1.313e-16 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:19,549: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-7.641e-10 mean_dot_after=7.836e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:19,549: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.0003916 mean_dot_after=0.001458 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:19,550: [PCGRAD][AUDIT] layer=conv2d__6839776845 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.01968 mean_dot_after=0.01979 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:19,550: [PCGRAD][AUDIT] layer=bn__4220490341 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.0009996 mean_dot_after=0.001678 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:19,550: [PCGRAD][AUDIT][GLOBAL] pairs=19 neg_before=12 (63.16%) \u2192 neg_after=3 (15.79%); fixed=9
+INFO - 2025-09-15 18:30:19,626: [SYNC] epoch 2/2 step 3/15 acc(model0)=0.2161458283662796
+DETAIL - 2025-09-15 18:30:21,674: [GRAD-CONFLICT] Overall conflict: 44.74% (17/38).
+DETAIL - 2025-09-15 18:30:21,761: [PCGRAD][ACTIVE] projected=34/76 (frac=0.45), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:30:21,762: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-4.796e-14 mean_dot_after=-3.434e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:21,763: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=1 (33.33%) neg_after=1 (33.33%) fixed=0 mean_dot_before=8.039e-09 mean_dot_after=9.058e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:21,763: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=1.637e-15 mean_dot_after=3.329e-15 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:21,763: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-1.164e-09 mean_dot_after=1.133e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:21,764: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.0004746 mean_dot_after=0.001754 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:21,764: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.42 mean_dot_after=0.4204 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:21,765: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=2.937e-15 mean_dot_after=2.937e-15 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:21,765: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=1.744e-10 mean_dot_after=1.645e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:21,765: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-0.001374 mean_dot_after=0.003073 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:21,766: [PCGRAD][AUDIT] layer=conv2d__6839776845 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.03142 mean_dot_after=0.03142 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:21,767: [PCGRAD][AUDIT] layer=bn__4220490341 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.002192 mean_dot_after=0.003342 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:21,767: [PCGRAD][AUDIT][GLOBAL] pairs=19 neg_before=7 (36.84%) \u2192 neg_after=2 (10.53%); fixed=5
+DETAIL - 2025-09-15 18:30:24,026: [GRAD-CONFLICT] Overall conflict: 44.74% (17/38).
+DETAIL - 2025-09-15 18:30:24,138: [PCGRAD][ACTIVE] projected=34/76 (frac=0.45), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:30:24,140: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-5.701e-15 mean_dot_after=-2.548e-15 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:24,140: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=8.39e-09 mean_dot_after=8.723e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:24,141: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-8.286e-14 mean_dot_after=-6.678e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:24,141: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=1.905e-09 mean_dot_after=1.905e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:24,141: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.001699 mean_dot_after=0.002121 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:24,142: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.0676 mean_dot_after=0.06786 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:24,142: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=2 (66.67%) neg_after=2 (66.67%) fixed=0 mean_dot_before=-6.488e-16 mean_dot_after=-6.262e-16 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:24,143: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-1.558e-10 mean_dot_after=7.098e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:24,143: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-0.0006709 mean_dot_after=0.001194 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:24,143: [PCGRAD][AUDIT] layer=conv2d__6839776845 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.007485 mean_dot_after=0.007485 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:24,143: [PCGRAD][AUDIT] layer=bn__4220490341 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.0002456 mean_dot_after=0.0002456 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:24,143: [PCGRAD][AUDIT][GLOBAL] pairs=19 neg_before=7 (36.84%) \u2192 neg_after=4 (21.05%); fixed=3
+DETAIL - 2025-09-15 18:30:26,424: [GRAD-CONFLICT] Overall conflict: 55.26% (21/38).
+DETAIL - 2025-09-15 18:30:26,554: [PCGRAD][ACTIVE] projected=42/76 (frac=0.55), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:30:26,555: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=4.417e-14 mean_dot_after=4.417e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:26,556: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-1.626e-09 mean_dot_after=4.354e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:26,556: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-1.787e-15 mean_dot_after=1.466e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:26,556: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=4.222e-09 mean_dot_after=4.222e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:26,556: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.004864 mean_dot_after=0.004864 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:26,557: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.2416 mean_dot_after=0.241 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:26,557: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=2 (66.67%) neg_after=2 (66.67%) fixed=0 mean_dot_before=-1.437e-15 mean_dot_after=-1.385e-15 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:26,557: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=2.432e-10 mean_dot_after=8.205e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:26,558: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-0.001394 mean_dot_after=0.003516 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:26,559: [PCGRAD][AUDIT] layer=conv2d__6839776845 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.03708 mean_dot_after=0.03698 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:26,559: [PCGRAD][AUDIT] layer=bn__4220490341 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.002894 mean_dot_after=0.003488 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:26,559: [PCGRAD][AUDIT][GLOBAL] pairs=19 neg_before=12 (63.16%) \u2192 neg_after=2 (10.53%); fixed=10
+INFO - 2025-09-15 18:30:26,638: [SYNC] epoch 2/2 step 6/15 acc(model0)=0.2278645783662796
+DETAIL - 2025-09-15 18:30:28,843: [GRAD-CONFLICT] Overall conflict: 52.63% (20/38).
+DETAIL - 2025-09-15 18:30:28,933: [PCGRAD][ACTIVE] projected=40/76 (frac=0.53), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:30:28,935: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=1.932e-13 mean_dot_after=1.935e-13 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:28,935: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=1.246e-08 mean_dot_after=1.252e-08 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:28,936: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-3.388e-14 mean_dot_after=-2.276e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:28,936: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=2.482e-09 mean_dot_after=2.482e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:28,936: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.002599 mean_dot_after=0.002599 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:28,937: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.1299 mean_dot_after=0.13 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:28,937: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=3 (100.00%) neg_after=3 (100.00%) fixed=0 mean_dot_before=-1.257e-15 mean_dot_after=-1.228e-15 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:28,938: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-1.036e-10 mean_dot_after=3.489e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:28,938: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=0.0003058 mean_dot_after=0.001211 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:28,939: [PCGRAD][AUDIT] layer=conv2d__6839776845 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.009501 mean_dot_after=0.009614 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:28,940: [PCGRAD][AUDIT] layer=bn__4220490341 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.0003767 mean_dot_after=0.0003767 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:28,940: [PCGRAD][AUDIT][GLOBAL] pairs=19 neg_before=10 (52.63%) \u2192 neg_after=4 (21.05%); fixed=6
+DETAIL - 2025-09-15 18:30:31,118: [GRAD-CONFLICT] Overall conflict: 52.63% (20/38).
+DETAIL - 2025-09-15 18:30:31,210: [PCGRAD][ACTIVE] projected=40/76 (frac=0.53), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:30:31,211: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-5.412e-14 mean_dot_after=-4.408e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:31,212: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=1.825e-09 mean_dot_after=1.945e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:31,212: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=3.929e-14 mean_dot_after=3.929e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:31,212: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=4.939e-09 mean_dot_after=4.939e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:31,213: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.005565 mean_dot_after=0.005565 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:31,213: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.02165 mean_dot_after=0.02156 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:31,214: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=2 (66.67%) neg_after=2 (66.67%) fixed=0 mean_dot_before=-2.965e-16 mean_dot_after=-2.696e-16 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:31,214: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-2.042e-10 mean_dot_after=4.904e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:31,214: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=0.0002136 mean_dot_after=0.000858 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:31,216: [PCGRAD][AUDIT] layer=conv2d__6839776845 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.01129 mean_dot_after=0.01129 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:31,216: [PCGRAD][AUDIT] layer=bn__4220490341 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-8.831e-06 mean_dot_after=0.0002349 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:31,216: [PCGRAD][AUDIT][GLOBAL] pairs=19 neg_before=9 (47.37%) \u2192 neg_after=3 (15.79%); fixed=6
+DETAIL - 2025-09-15 18:30:33,333: [GRAD-CONFLICT] Overall conflict: 50.00% (19/38).
+DETAIL - 2025-09-15 18:30:33,464: [PCGRAD][ACTIVE] projected=38/76 (frac=0.50), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:30:33,466: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=1.485e-14 mean_dot_after=1.586e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:33,466: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=3.343e-09 mean_dot_after=6.26e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:33,466: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-2.303e-14 mean_dot_after=-2.035e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:33,466: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=2.182e-09 mean_dot_after=2.182e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:33,466: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.002325 mean_dot_after=0.002325 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:33,468: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.3886 mean_dot_after=0.3862 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:33,468: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=1 (33.33%) neg_after=1 (33.33%) fixed=0 mean_dot_before=1.391e-15 mean_dot_after=1.404e-15 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:33,468: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-4.077e-10 mean_dot_after=8.179e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:33,468: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=3 (100.00%) neg_after=0 (0.00%) fixed=3 mean_dot_before=-0.001096 mean_dot_after=0.001509 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:33,469: [PCGRAD][AUDIT] layer=conv2d__6839776845 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.008347 mean_dot_after=0.009106 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:33,469: [PCGRAD][AUDIT] layer=bn__4220490341 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.001225 mean_dot_after=0.003073 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:33,469: [PCGRAD][AUDIT][GLOBAL] pairs=19 neg_before=11 (57.89%) \u2192 neg_after=2 (10.53%); fixed=9
+INFO - 2025-09-15 18:30:33,549: [SYNC] epoch 2/2 step 9/15 acc(model0)=0.2404513955116272
+DETAIL - 2025-09-15 18:30:35,927: [GRAD-CONFLICT] Overall conflict: 57.89% (22/38).
+DETAIL - 2025-09-15 18:30:36,022: [PCGRAD][ACTIVE] projected=44/76 (frac=0.58), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:30:36,024: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-5.989e-14 mean_dot_after=-4.505e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:36,024: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=2 (66.67%) neg_after=1 (33.33%) fixed=1 mean_dot_before=-2.978e-09 mean_dot_after=1.657e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:36,025: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-9.878e-15 mean_dot_after=-1.841e-15 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:36,025: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=2.911e-09 mean_dot_after=2.911e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:36,025: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.002706 mean_dot_after=0.002991 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:36,026: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.07779 mean_dot_after=0.07776 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:36,026: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=3 (100.00%) neg_after=3 (100.00%) fixed=0 mean_dot_before=-1.177e-15 mean_dot_after=-1.128e-15 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:36,026: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-6.123e-10 mean_dot_after=7.73e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:36,026: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.0008767 mean_dot_after=0.002266 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:36,028: [PCGRAD][AUDIT] layer=conv2d__6839776845 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.009312 mean_dot_after=0.00931 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:36,029: [PCGRAD][AUDIT] layer=bn__4220490341 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.001458 mean_dot_after=0.001509 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:36,029: [PCGRAD][AUDIT][GLOBAL] pairs=19 neg_before=12 (63.16%) \u2192 neg_after=6 (31.58%); fixed=6
+DETAIL - 2025-09-15 18:30:38,167: [GRAD-CONFLICT] Overall conflict: 52.63% (20/38).
+DETAIL - 2025-09-15 18:30:38,254: [PCGRAD][ACTIVE] projected=40/76 (frac=0.53), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:30:38,256: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-2.911e-14 mean_dot_after=-2.563e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:38,256: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=4.622e-09 mean_dot_after=4.622e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:38,257: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-1.189e-13 mean_dot_after=-9.063e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:38,257: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-1.333e-09 mean_dot_after=1.761e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:38,257: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.001322 mean_dot_after=0.0002148 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:38,258: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.4829 mean_dot_after=0.4761 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:38,258: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=1 (33.33%) neg_after=1 (33.33%) fixed=0 mean_dot_before=1.79e-16 mean_dot_after=1.936e-16 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:38,258: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=2.32e-10 mean_dot_after=7.494e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:38,259: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-0.0009034 mean_dot_after=0.001787 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:38,260: [PCGRAD][AUDIT] layer=conv2d__6839776845 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.005237 mean_dot_after=0.005237 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:38,260: [PCGRAD][AUDIT] layer=bn__4220490341 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.0005219 mean_dot_after=0.000519 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:38,260: [PCGRAD][AUDIT][GLOBAL] pairs=19 neg_before=11 (57.89%) \u2192 neg_after=3 (15.79%); fixed=8
+DETAIL - 2025-09-15 18:30:40,414: [GRAD-CONFLICT] Overall conflict: 36.84% (14/38).
+DETAIL - 2025-09-15 18:30:40,543: [PCGRAD][ACTIVE] projected=28/76 (frac=0.37), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:30:40,545: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=3.745e-15 mean_dot_after=3.745e-15 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:40,545: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=3 (100.00%) neg_after=1 (33.33%) fixed=2 mean_dot_before=-3.636e-09 mean_dot_after=1.343e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:40,545: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=2.48e-14 mean_dot_after=2.48e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:40,546: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=5.105e-09 mean_dot_after=5.105e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:40,546: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.005292 mean_dot_after=0.005292 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:40,546: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.04341 mean_dot_after=0.04341 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:40,546: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=1.716e-15 mean_dot_after=1.719e-15 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:40,547: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=8.211e-10 mean_dot_after=8.211e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:40,547: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=0.0008293 mean_dot_after=0.002436 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:40,548: [PCGRAD][AUDIT] layer=conv2d__6839776845 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.004422 mean_dot_after=0.004696 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:40,549: [PCGRAD][AUDIT] layer=bn__4220490341 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.0001692 mean_dot_after=0.0005854 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:40,549: [PCGRAD][AUDIT][GLOBAL] pairs=19 neg_before=6 (31.58%) \u2192 neg_after=1 (5.26%); fixed=5
+INFO - 2025-09-15 18:30:40,634: [SYNC] epoch 2/2 step 12/15 acc(model0)=0.2578125
+DETAIL - 2025-09-15 18:30:42,750: [GRAD-CONFLICT] Overall conflict: 39.47% (15/38).
+DETAIL - 2025-09-15 18:30:42,837: [PCGRAD][ACTIVE] projected=30/76 (frac=0.39), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:30:42,838: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=1.685e-13 mean_dot_after=1.687e-13 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:42,840: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=2 (66.67%) neg_after=1 (33.33%) fixed=1 mean_dot_before=-2.173e-09 mean_dot_after=8.816e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:42,840: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-4.997e-14 mean_dot_after=-4.266e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:42,840: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=2.214e-10 mean_dot_after=2.214e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:42,841: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.001024 mean_dot_after=0.001024 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:42,841: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.5679 mean_dot_after=0.5679 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:42,841: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=1 (33.33%) neg_after=1 (33.33%) fixed=0 mean_dot_before=-8.285e-17 mean_dot_after=-1.333e-17 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:42,841: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-2.31e-11 mean_dot_after=4.296e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:42,842: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=0.0002261 mean_dot_after=0.0008815 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:42,843: [PCGRAD][AUDIT] layer=conv2d__6839776845 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.01994 mean_dot_after=0.01994 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:42,843: [PCGRAD][AUDIT] layer=bn__4220490341 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-5.805e-05 mean_dot_after=0.0001068 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:42,843: [PCGRAD][AUDIT][GLOBAL] pairs=19 neg_before=9 (47.37%) \u2192 neg_after=3 (15.79%); fixed=6
+DETAIL - 2025-09-15 18:30:44,951: [GRAD-CONFLICT] Overall conflict: 47.37% (18/38).
+DETAIL - 2025-09-15 18:30:45,037: [PCGRAD][ACTIVE] projected=36/76 (frac=0.47), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:30:45,038: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-1.04e-13 mean_dot_after=-5.638e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:45,038: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=2.465e-09 mean_dot_after=5.658e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:45,039: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=6.874e-14 mean_dot_after=6.874e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:45,039: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=3.642e-10 mean_dot_after=3.642e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:45,039: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-2.482e-05 mean_dot_after=0.0006991 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:45,040: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.2105 mean_dot_after=0.2109 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:45,040: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=1 (33.33%) neg_after=1 (33.33%) fixed=0 mean_dot_before=-4.001e-16 mean_dot_after=-3.585e-16 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:45,040: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-4.856e-10 mean_dot_after=7.422e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:45,041: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=4.546e-05 mean_dot_after=0.001213 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:45,041: [PCGRAD][AUDIT] layer=conv2d__6839776845 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.00317 mean_dot_after=0.00317 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:45,042: [PCGRAD][AUDIT] layer=bn__4220490341 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.001508 mean_dot_after=0.002392 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:45,042: [PCGRAD][AUDIT][GLOBAL] pairs=19 neg_before=11 (57.89%) \u2192 neg_after=2 (10.53%); fixed=9
+DETAIL - 2025-09-15 18:30:47,153: [GRAD-CONFLICT] Overall conflict: 39.47% (15/38).
+DETAIL - 2025-09-15 18:30:47,278: [PCGRAD][ACTIVE] projected=31/76 (frac=0.41), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:30:47,279: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=8.95e-14 mean_dot_after=8.96e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:47,279: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=9.014e-09 mean_dot_after=1.116e-08 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:47,280: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-1.482e-13 mean_dot_after=-7.46e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:47,281: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=3.685e-09 mean_dot_after=3.685e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:47,281: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.00406 mean_dot_after=0.00406 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:47,281: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.5312 mean_dot_after=0.5184 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:47,281: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=1 (33.33%) neg_after=1 (33.33%) fixed=0 mean_dot_before=9.899e-17 mean_dot_after=1.248e-16 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:47,281: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=6.656e-10 mean_dot_after=9.452e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:47,282: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-0.001391 mean_dot_after=0.003132 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:47,283: [PCGRAD][AUDIT] layer=conv2d__6839776845 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.00682 mean_dot_after=0.006852 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:47,283: [PCGRAD][AUDIT] layer=bn__4220490341 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.0028 mean_dot_after=0.0028 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:30:47,283: [PCGRAD][AUDIT][GLOBAL] pairs=19 neg_before=7 (36.84%) \u2192 neg_after=2 (10.53%); fixed=5
+INFO - 2025-09-15 18:30:47,378: [SYNC] epoch 2/2 step 15/15 acc(model0)=0.2552083432674408
+INFO - 2025-09-15 18:30:48,964: [SYNC] epoch 2 val_accuracy=0.1000
+DETAIL - 2025-09-15 18:31:25,628: This iteration: [[1, 1, [2.3927981853485107, 0.10000000149011612], (5, 4, 100), 0, 0], [2, 2, [2.5853748321533203, 0.10559999942779541], (4, 3, 252), 0, 0], [3, 3, [2.2719268798828125, 0.1298000067472458], (3, 2, 86), 0, 0], [4, 4, [2.2578179836273193, 0.23029999434947968], (5, 4, 239), 0, 0], [5, 5, [2.296780586242676, 0.14720000326633453], (5, 4, 408), 0, 0], [6, 1, [2.356428623199463, 0.11829999834299088], (5, 4, 100), 0, 0]]
+DETAIL - 2025-09-15 18:31:25,628: Best model chosen: [4, 4, [2.2578179836273193, 0.23029999434947968], (5, 4, 239), 0, 0]
+INFO - 2025-09-15 18:31:25,667:  -- Iterating generation 1 --
+DETAIL - 2025-09-15 18:31:25,667: Currently 20 modules, 5 blueprints, latest iteration: [[1, 1, [2.3927981853485107, 0.10000000149011612], (5, 4, 100), 0, 0], [2, 2, [2.5853748321533203, 0.10559999942779541], (4, 3, 252), 0, 0], [3, 3, [2.2719268798828125, 0.1298000067472458], (3, 2, 86), 0, 0], [4, 4, [2.2578179836273193, 0.23029999434947968], (5, 4, 239), 0, 0], [5, 5, [2.296780586242676, 0.14720000326633453], (5, 4, 408), 0, 0], [6, 1, [2.356428623199463, 0.11829999834299088], (5, 4, 100), 0, 0]]
+DETAIL - 2025-09-15 18:31:25,667: Current modules: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+DETAIL - 2025-09-15 18:31:25,667: Current blueprints: [1, 2, 3, 4, 5]
+INFO - 2025-09-15 18:31:25,667: [MAGIC-T][SEARCH] generation 1 total_mutations=1 burst=False
+INFO - 2025-09-15 18:31:25,667: [POP] Created 6 individuals: [(7, 1), (8, 2), (9, 3), (10, 4), (11, 5), (12, 1)]
+DETAIL - 2025-09-15 18:31:25,667: Created individuals for blueprints: [(7, 1), (8, 2), (9, 3), (10, 4), (11, 5), (12, 1)]
+DETAIL - 2025-09-15 18:31:25,667: Starting assembling of blueprint 1.
+DETAIL - 2025-09-15 18:31:25,667: Generated assembled graph for blueprint 1: ['input-0-0', 'intermed-0-0', 'intermed-1-0', 'intermed-2-0', 'output-0-0']
+DETAIL - 2025-09-15 18:31:25,667: Added Input layer: KerasTensor(type_spec=TensorSpec(shape=(None, 32, 32, 3), dtype=tf.float32, name='input_1'), name='input_1', description="created by layer 'input_1'")
+DETAIL - 2025-09-15 18:31:25,667: [LIVE-SHARE] REUSE  key=('maxpool', 3, (('padding', 'valid'), ('pool_size', 3), ('strides', 2)), (0, 'input-0#0')) layer_id=1995752594960
+DETAIL - 2025-09-15 18:31:25,667: [LIVE-SHARE] REUSE  key=('bn', 3, (), (0, 'input-0#1')) layer_id=1995752596544
+DETAIL - 2025-09-15 18:31:25,676: [LIVE-SHARE] REUSE  key=('bn', 3, (), (0, 'input-0#2')) layer_id=1995752599280
+DETAIL - 2025-09-15 18:31:25,685: [LIVE-SHARE] REUSE  key=('bn', 3, (), (0, 'intermed-0#0')) layer_id=1995752603552
+DETAIL - 2025-09-15 18:31:25,691: [LIVE-SHARE] REUSE  key=('bn', 3, (), (0, 'intermed-0#1')) layer_id=1995752602736
+DETAIL - 2025-09-15 18:31:25,696: [LIVE-SHARE] REUSE  key=('bn', 3, (), (0, 'intermed-0#2')) layer_id=1995820964048
+DETAIL - 2025-09-15 18:31:25,704: [LIVE-SHARE] REUSE  key=('conv2d', 3, (('activation', 'relu'), ('data_format', 'channels_last'), ('filters', 73), ('kernel_size', 5), ('padding', 'same'), ('strides', 1)), (2, 'intermed-1#0')) layer_id=1995820971680
+DETAIL - 2025-09-15 18:31:25,711: [LIVE-SHARE] REUSE  key=('bn', 73, (), (2, 'intermed-1#1')) layer_id=1995752596208
+DETAIL - 2025-09-15 18:31:25,716: [LIVE-SHARE] REUSE  key=('maxpool', 73, (('padding', 'valid'), ('pool_size', 3), ('strides', 2)), (0, 'intermed-2#0')) layer_id=1995820962608
+DETAIL - 2025-09-15 18:31:25,719: [LIVE-SHARE] REUSE  key=('maxpool', 73, (('padding', 'valid'), ('pool_size', 3), ('strides', 2)), (0, 'output-0#0')) layer_id=1995820963376
+DETAIL - 2025-09-15 18:31:25,721: [LIVE-SHARE] REUSE  key=('bn', 73, (), (0, 'output-0#1')) layer_id=1995821110160
+DETAIL - 2025-09-15 18:31:25,726: [LIVE-SHARE] REUSE  key=('bn', 73, (), (0, 'output-0#2')) layer_id=1995821110928
+DETAIL - 2025-09-15 18:31:25,744: Starting assembling of blueprint 2.
+DETAIL - 2025-09-15 18:31:25,746: Generated assembled graph for blueprint 2: ['input-0-0', 'intermed-0-0', 'intermed-1-0', 'output-0-0']
+DETAIL - 2025-09-15 18:31:25,746: Added Input layer: KerasTensor(type_spec=TensorSpec(shape=(None, 32, 32, 3), dtype=tf.float32, name='input_2'), name='input_2', description="created by layer 'input_2'")
+DETAIL - 2025-09-15 18:31:25,747: [LIVE-SHARE] REUSE  key=('bn', 3, (), (0, 'input-0#0')) layer_id=1995821307344
+DETAIL - 2025-09-15 18:31:25,752: [LIVE-SHARE] REUSE  key=('maxpool', 3, (('padding', 'valid'), ('pool_size', 2), ('strides', 2)), (0, 'input-0#1')) layer_id=1995821309120
+DETAIL - 2025-09-15 18:31:25,754: [LIVE-SHARE] REUSE  key=('bn', 3, (), (0, 'input-0#2')) layer_id=1995752599280
+DETAIL - 2025-09-15 18:31:25,758: [LIVE-SHARE] REUSE  key=('conv2d', 3, (('activation', 'relu'), ('data_format', 'channels_last'), ('filters', 87), ('kernel_size', 5), ('padding', 'same'), ('strides', 1)), (1, 'intermed-0#0')) layer_id=1995821315792
+DETAIL - 2025-09-15 18:31:25,762: [LIVE-SHARE] REUSE  key=('bn', 87, (), (1, 'intermed-0#1')) layer_id=1995821316992
+DETAIL - 2025-09-15 18:31:25,767: [LIVE-SHARE] REUSE  key=('conv2d', 87, (('activation', 'relu'), ('data_format', 'channels_last'), ('filters', 79), ('kernel_size', 5), ('padding', 'same'), ('strides', 1)), (1, 'intermed-0#2')) layer_id=1995821314688
+DETAIL - 2025-09-15 18:31:25,767: [LIVE-SHARE] REUSE  key=('conv2d', 79, (('activation', 'relu'), ('data_format', 'channels_last'), ('filters', 73), ('kernel_size', 5), ('padding', 'same'), ('strides', 1)), (2, 'intermed-1#0')) layer_id=1995839708256
+DETAIL - 2025-09-15 18:31:25,767: [LIVE-SHARE] REUSE  key=('bn', 73, (), (2, 'intermed-1#1')) layer_id=1995752596208
+DETAIL - 2025-09-15 18:31:25,776: [LIVE-SHARE] REUSE  key=('maxpool', 73, (('padding', 'valid'), ('pool_size', 3), ('strides', 2)), (0, 'output-0#0')) layer_id=1995820963376
+DETAIL - 2025-09-15 18:31:25,776: [LIVE-SHARE] REUSE  key=('bn', 73, (), (0, 'output-0#1')) layer_id=1995821110160
+DETAIL - 2025-09-15 18:31:25,785: [LIVE-SHARE] REUSE  key=('bn', 73, (), (0, 'output-0#2')) layer_id=1995821110928
+DETAIL - 2025-09-15 18:31:25,806: Starting assembling of blueprint 3.
+DETAIL - 2025-09-15 18:31:25,806: Generated assembled graph for blueprint 3: ['input-0-0', 'intermed-0-0', 'output-0-0']
+DETAIL - 2025-09-15 18:31:25,806: Added Input layer: KerasTensor(type_spec=TensorSpec(shape=(None, 32, 32, 3), dtype=tf.float32, name='input_3'), name='input_3', description="created by layer 'input_3'")
+DETAIL - 2025-09-15 18:31:25,808: [LIVE-SHARE] REUSE  key=('conv2d', 3, (('activation', 'relu'), ('data_format', 'channels_last'), ('filters', 73), ('kernel_size', 5), ('padding', 'same'), ('strides', 1)), (2, 'input-0#0')) layer_id=1995839703744
+DETAIL - 2025-09-15 18:31:25,811: [LIVE-SHARE] REUSE  key=('bn', 73, (), (2, 'input-0#1')) layer_id=1995839715168
+DETAIL - 2025-09-15 18:31:25,816: [LIVE-SHARE] REUSE  key=('maxpool', 73, (('padding', 'valid'), ('pool_size', 3), ('strides', 2)), (0, 'intermed-0#0')) layer_id=1995821105360
+DETAIL - 2025-09-15 18:31:25,818: [LIVE-SHARE] REUSE  key=('bn', 73, (), (0, 'output-0#0')) layer_id=1995839816176
+DETAIL - 2025-09-15 18:31:25,823: [LIVE-SHARE] REUSE  key=('maxpool', 73, (('padding', 'valid'), ('pool_size', 2), ('strides', 2)), (0, 'output-0#1')) layer_id=1995839822704
+DETAIL - 2025-09-15 18:31:25,839: Starting assembling of blueprint 4.
+DETAIL - 2025-09-15 18:31:25,839: Generated assembled graph for blueprint 4: ['input-0-0', 'intermed-0-0', 'intermed-1-0', 'intermed-2-0', 'output-0-0']
+DETAIL - 2025-09-15 18:31:25,840: Added Input layer: KerasTensor(type_spec=TensorSpec(shape=(None, 32, 32, 3), dtype=tf.float32, name='input_4'), name='input_4', description="created by layer 'input_4'")
+DETAIL - 2025-09-15 18:31:25,840: [LIVE-SHARE] REUSE  key=('conv2d', 3, (('activation', 'relu'), ('data_format', 'channels_last'), ('filters', 35), ('kernel_size', 1), ('padding', 'same'), ('strides', 1)), (2, 'input-0#0')) layer_id=1995839821888
+DETAIL - 2025-09-15 18:31:25,844: [LIVE-SHARE] REUSE  key=('bn', 35, (), (2, 'input-0#1')) layer_id=1995839828992
+DETAIL - 2025-09-15 18:31:25,846: [LIVE-SHARE] REUSE  key=('bn', 35, (), (0, 'intermed-0#0')) layer_id=1995839872864
+DETAIL - 2025-09-15 18:31:25,850: [LIVE-SHARE] REUSE  key=('bn', 35, (), (2, 'intermed-1#0')) layer_id=1995839870848
+DETAIL - 2025-09-15 18:31:25,855: [LIVE-SHARE] REUSE  key=('maxpool', 35, (('padding', 'valid'), ('pool_size', 3), ('strides', 2)), (2, 'intermed-1#1')) layer_id=1995839880016
+DETAIL - 2025-09-15 18:31:25,855: [LIVE-SHARE] REUSE  key=('conv2d', 35, (('activation', 'relu'), ('data_format', 'channels_last'), ('filters', 37), ('kernel_size', 3), ('padding', 'same'), ('strides', 1)), (2, 'intermed-1#2')) layer_id=1995839875696
+DETAIL - 2025-09-15 18:31:25,855: [LIVE-SHARE] REUSE  key=('maxpool', 37, (('padding', 'valid'), ('pool_size', 2), ('strides', 2)), (0, 'intermed-2#0')) layer_id=1995839986448
+DETAIL - 2025-09-15 18:31:25,855: [LIVE-SHARE] REUSE  key=('maxpool', 37, (('padding', 'valid'), ('pool_size', 3), ('strides', 2)), (0, 'intermed-2#1')) layer_id=1995839989088
+DETAIL - 2025-09-15 18:31:25,867: [LIVE-SHARE] REUSE  key=('conv2d', 37, (('activation', 'relu'), ('data_format', 'channels_last'), ('filters', 70), ('kernel_size', 3), ('padding', 'same'), ('strides', 1)), (1, 'output-0#0')) layer_id=1995839990192
+DETAIL - 2025-09-15 18:31:25,868: [LIVE-SHARE] CREATE key=('conv2d', 70, (('activation', 'relu'), ('data_format', 'channels_last'), ('filters', 16), ('kernel_size', 3), ('padding', 'same'), ('strides', 1)), (1, 'output-0#1')) name=conv2d__7992450874 layer_id=1995864516704
+DETAIL - 2025-09-15 18:31:25,881: [LIVE-SHARE] CREATE key=('bn', 16, (), (1, 'output-0#2')) name=bn__4489220619 layer_id=1995864522704
+DETAIL - 2025-09-15 18:31:25,906: Starting assembling of blueprint 5.
+DETAIL - 2025-09-15 18:31:25,906: Generated assembled graph for blueprint 5: ['input-0-0', 'intermed-0-0', 'intermed-1-0', 'intermed-2-0', 'output-0-0']
+DETAIL - 2025-09-15 18:31:25,906: Added Input layer: KerasTensor(type_spec=TensorSpec(shape=(None, 32, 32, 3), dtype=tf.float32, name='input_5'), name='input_5', description="created by layer 'input_5'")
+DETAIL - 2025-09-15 18:31:25,906: [LIVE-SHARE] REUSE  key=('conv2d', 3, (('activation', 'relu'), ('data_format', 'channels_last'), ('filters', 87), ('kernel_size', 5), ('padding', 'same'), ('strides', 1)), (1, 'input-0#0')) layer_id=1995840067696
+DETAIL - 2025-09-15 18:31:25,906: [LIVE-SHARE] REUSE  key=('bn', 87, (), (1, 'input-0#1')) layer_id=1995840074512
+DETAIL - 2025-09-15 18:31:25,915: [LIVE-SHARE] REUSE  key=('conv2d', 87, (('activation', 'relu'), ('data_format', 'channels_last'), ('filters', 79), ('kernel_size', 5), ('padding', 'same'), ('strides', 1)), (1, 'input-0#2')) layer_id=1995840075280
+DETAIL - 2025-09-15 18:31:25,917: [LIVE-SHARE] REUSE  key=('conv2d', 79, (('activation', 'relu'), ('data_format', 'channels_last'), ('filters', 54), ('kernel_size', 1), ('padding', 'same'), ('strides', 1)), (2, 'intermed-0#0')) layer_id=1995840074416
+DETAIL - 2025-09-15 18:31:25,917: [LIVE-SHARE] REUSE  key=('maxpool', 54, (('padding', 'valid'), ('pool_size', 2), ('strides', 2)), (2, 'intermed-0#1')) layer_id=1995840168448
+DETAIL - 2025-09-15 18:31:25,926: [LIVE-SHARE] REUSE  key=('bn', 54, (), (2, 'intermed-0#2')) layer_id=1995840171664
+DETAIL - 2025-09-15 18:31:25,926: [LIVE-SHARE] REUSE  key=('maxpool', 54, (('padding', 'valid'), ('pool_size', 2), ('strides', 2)), (0, 'intermed-1#0')) layer_id=1995840166000
+DETAIL - 2025-09-15 18:31:25,926: [LIVE-SHARE] REUSE  key=('conv2d', 54, (('activation', 'relu'), ('data_format', 'channels_last'), ('filters', 35), ('kernel_size', 1), ('padding', 'same'), ('strides', 1)), (2, 'intermed-2#0')) layer_id=1995840174784
+DETAIL - 2025-09-15 18:31:25,936: [LIVE-SHARE] REUSE  key=('bn', 35, (), (2, 'intermed-2#1')) layer_id=1995840165424
+DETAIL - 2025-09-15 18:31:25,940: [LIVE-SHARE] REUSE  key=('conv2d', 35, (('activation', 'relu'), ('data_format', 'channels_last'), ('filters', 70), ('kernel_size', 3), ('padding', 'same'), ('strides', 1)), (1, 'output-0#0')) layer_id=1995840175552
+DETAIL - 2025-09-15 18:31:25,945: [LIVE-SHARE] REUSE  key=('conv2d', 70, (('activation', 'relu'), ('data_format', 'channels_last'), ('filters', 75), ('kernel_size', 3), ('padding', 'same'), ('strides', 1)), (1, 'output-0#1')) layer_id=1995839987792
+DETAIL - 2025-09-15 18:31:25,948: [LIVE-SHARE] REUSE  key=('bn', 75, (), (1, 'output-0#2')) layer_id=1995839994800
+DETAIL - 2025-09-15 18:31:25,966: Starting assembling of blueprint 1.
+DETAIL - 2025-09-15 18:31:25,966: Generated assembled graph for blueprint 1: ['input-0-0', 'intermed-0-0', 'intermed-1-0', 'intermed-2-0', 'output-0-0']
+DETAIL - 2025-09-15 18:31:25,966: Added Input layer: KerasTensor(type_spec=TensorSpec(shape=(None, 32, 32, 3), dtype=tf.float32, name='input_1'), name='input_1', description="created by layer 'input_1'")
+DETAIL - 2025-09-15 18:31:25,966: [LIVE-SHARE] REUSE  key=('maxpool', 3, (('padding', 'valid'), ('pool_size', 3), ('strides', 2)), (0, 'input-0#0')) layer_id=1995752594960
+DETAIL - 2025-09-15 18:31:25,966: [LIVE-SHARE] REUSE  key=('bn', 3, (), (0, 'input-0#1')) layer_id=1995752596544
+DETAIL - 2025-09-15 18:31:25,976: [LIVE-SHARE] REUSE  key=('bn', 3, (), (0, 'input-0#2')) layer_id=1995752599280
+DETAIL - 2025-09-15 18:31:25,976: [LIVE-SHARE] REUSE  key=('bn', 3, (), (0, 'intermed-0#0')) layer_id=1995752603552
+DETAIL - 2025-09-15 18:31:25,986: [LIVE-SHARE] REUSE  key=('bn', 3, (), (0, 'intermed-0#1')) layer_id=1995752602736
+DETAIL - 2025-09-15 18:31:25,991: [LIVE-SHARE] REUSE  key=('bn', 3, (), (0, 'intermed-0#2')) layer_id=1995820964048
+DETAIL - 2025-09-15 18:31:25,995: [LIVE-SHARE] REUSE  key=('conv2d', 3, (('activation', 'relu'), ('data_format', 'channels_last'), ('filters', 73), ('kernel_size', 5), ('padding', 'same'), ('strides', 1)), (2, 'intermed-1#0')) layer_id=1995820971680
+DETAIL - 2025-09-15 18:31:26,000: [LIVE-SHARE] REUSE  key=('bn', 73, (), (2, 'intermed-1#1')) layer_id=1995752596208
+DETAIL - 2025-09-15 18:31:26,004: [LIVE-SHARE] REUSE  key=('maxpool', 73, (('padding', 'valid'), ('pool_size', 3), ('strides', 2)), (0, 'intermed-2#0')) layer_id=1995820962608
+DETAIL - 2025-09-15 18:31:26,006: [LIVE-SHARE] REUSE  key=('maxpool', 73, (('padding', 'valid'), ('pool_size', 3), ('strides', 2)), (0, 'output-0#0')) layer_id=1995820963376
+DETAIL - 2025-09-15 18:31:26,008: [LIVE-SHARE] REUSE  key=('bn', 73, (), (0, 'output-0#1')) layer_id=1995821110160
+DETAIL - 2025-09-15 18:31:26,012: [LIVE-SHARE] REUSE  key=('bn', 73, (), (0, 'output-0#2')) layer_id=1995821110928
+INFO - 2025-09-15 18:31:26,304: [SYNC] Iterating fitness (parallel-style) over 6 individuals
+DETAIL - 2025-09-15 18:31:28,738: [GRAD-CONFLICT] Overall conflict: 38.24% (13/34).
+DETAIL - 2025-09-15 18:31:28,813: [PCGRAD][ACTIVE] projected=27/68 (frac=0.40), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:31:28,815: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-1.366e-13 mean_dot_after=-4.509e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:28,815: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=2 (66.67%) neg_after=1 (33.33%) fixed=1 mean_dot_before=-1.178e-08 mean_dot_after=9.697e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:28,816: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=1.201e-13 mean_dot_after=1.284e-13 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:28,816: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-1.588e-08 mean_dot_after=7.336e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:28,816: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.01691 mean_dot_after=0.007531 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:28,816: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=2.761 mean_dot_after=2.761 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:28,817: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=4.999e-15 mean_dot_after=4.999e-15 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:28,817: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=8.705e-09 mean_dot_after=8.705e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:28,817: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=0.005972 mean_dot_after=0.01084 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:28,817: [PCGRAD][AUDIT][GLOBAL] pairs=17 neg_before=6 (35.29%) \u2192 neg_after=2 (11.76%); fixed=4
+DETAIL - 2025-09-15 18:31:30,914: [GRAD-CONFLICT] Overall conflict: 32.35% (11/34).
+DETAIL - 2025-09-15 18:31:30,988: [PCGRAD][ACTIVE] projected=22/68 (frac=0.32), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:31:30,989: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-1.134e-14 mean_dot_after=-8.323e-15 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:30,990: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=4.599e-09 mean_dot_after=8.541e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:30,990: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=7.117e-14 mean_dot_after=7.117e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:30,991: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=7.921e-09 mean_dot_after=7.921e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:30,991: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.007494 mean_dot_after=0.007568 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:30,991: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.2013 mean_dot_after=0.2013 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:30,992: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=2.215e-15 mean_dot_after=2.246e-15 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:30,992: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=3.489e-09 mean_dot_after=3.489e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:30,993: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.002317 mean_dot_after=0.006028 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:30,993: [PCGRAD][AUDIT][GLOBAL] pairs=17 neg_before=2 (11.76%) \u2192 neg_after=1 (5.88%); fixed=1
+DETAIL - 2025-09-15 18:31:33,108: [GRAD-CONFLICT] Overall conflict: 52.94% (18/34).
+DETAIL - 2025-09-15 18:31:33,223: [PCGRAD][ACTIVE] projected=38/68 (frac=0.56), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:31:33,225: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=2.561e-13 mean_dot_after=2.564e-13 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:33,225: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-1.911e-09 mean_dot_after=2.723e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:33,225: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-8.399e-14 mean_dot_after=-6.532e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:33,226: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-1.739e-08 mean_dot_after=8.369e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:33,226: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.0161 mean_dot_after=0.01023 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:33,226: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.2602 mean_dot_after=0.26 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:33,227: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=1 (33.33%) neg_after=1 (33.33%) fixed=0 mean_dot_before=-4.557e-14 mean_dot_after=-1.425e-15 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:33,227: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=1.388e-09 mean_dot_after=2.267e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:33,227: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-5.479e-05 mean_dot_after=0.003505 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:33,227: [PCGRAD][AUDIT][GLOBAL] pairs=17 neg_before=10 (58.82%) \u2192 neg_after=2 (11.76%); fixed=8
+INFO - 2025-09-15 18:31:33,302: [SYNC] epoch 1/2 step 3/15 acc(model0)=None
+DETAIL - 2025-09-15 18:31:35,332: [GRAD-CONFLICT] Overall conflict: 52.94% (18/34).
+DETAIL - 2025-09-15 18:31:35,412: [PCGRAD][ACTIVE] projected=36/68 (frac=0.53), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:31:35,414: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-2.661e-14 mean_dot_after=-1.695e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:35,414: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-3.499e-09 mean_dot_after=3.161e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:35,414: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-2.794e-14 mean_dot_after=-2.217e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:35,414: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-8.193e-09 mean_dot_after=1.064e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:35,414: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.008029 mean_dot_after=0.001051 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:35,415: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-1.201 mean_dot_after=1.128 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:35,416: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=3.957e-14 mean_dot_after=3.961e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:35,416: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-4.265e-10 mean_dot_after=1.138e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:35,416: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-0.001053 mean_dot_after=0.00429 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:35,417: [PCGRAD][AUDIT][GLOBAL] pairs=17 neg_before=9 (52.94%) \u2192 neg_after=2 (11.76%); fixed=7
+DETAIL - 2025-09-15 18:31:37,554: [GRAD-CONFLICT] Overall conflict: 58.82% (20/34).
+DETAIL - 2025-09-15 18:31:37,633: [PCGRAD][ACTIVE] projected=40/68 (frac=0.59), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:31:37,635: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-2.134e-14 mean_dot_after=-2.019e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:37,635: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=4.793e-09 mean_dot_after=6.876e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:37,635: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-6.927e-14 mean_dot_after=-5.702e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:37,636: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=4.333e-10 mean_dot_after=4.333e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:37,636: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.0008691 mean_dot_after=0.0008691 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:37,636: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.3251 mean_dot_after=0.323 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:37,637: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=2 (66.67%) neg_after=1 (33.33%) fixed=1 mean_dot_before=-7.185e-15 mean_dot_after=2.109e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:37,637: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=2 (66.67%) neg_after=1 (33.33%) fixed=1 mean_dot_before=-3.832e-10 mean_dot_after=3.837e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:37,637: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.000161 mean_dot_after=0.001484 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:37,637: [PCGRAD][AUDIT][GLOBAL] pairs=17 neg_before=10 (58.82%) \u2192 neg_after=4 (23.53%); fixed=6
+DETAIL - 2025-09-15 18:31:39,730: [GRAD-CONFLICT] Overall conflict: 67.65% (23/34).
+DETAIL - 2025-09-15 18:31:39,849: [PCGRAD][ACTIVE] projected=48/68 (frac=0.71), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:31:39,850: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-2.538e-14 mean_dot_after=-1.957e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:39,850: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-5.6e-10 mean_dot_after=3.581e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:39,851: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-1.219e-14 mean_dot_after=-1.147e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:39,851: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-1.86e-10 mean_dot_after=1.858e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:39,851: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.000238 mean_dot_after=0.0003956 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:39,851: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.3817 mean_dot_after=0.3802 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:39,852: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=1 (33.33%) neg_after=1 (33.33%) fixed=0 mean_dot_before=8.659e-14 mean_dot_after=8.666e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:39,852: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=3 (100.00%) neg_after=0 (0.00%) fixed=3 mean_dot_before=-2.077e-09 mean_dot_after=2.121e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:39,852: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-0.002083 mean_dot_after=0.003634 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:39,853: [PCGRAD][AUDIT][GLOBAL] pairs=17 neg_before=11 (64.71%) \u2192 neg_after=3 (17.65%); fixed=8
+INFO - 2025-09-15 18:31:39,929: [SYNC] epoch 1/2 step 6/15 acc(model0)=None
+DETAIL - 2025-09-15 18:31:41,948: [GRAD-CONFLICT] Overall conflict: 67.65% (23/34).
+DETAIL - 2025-09-15 18:31:42,031: [PCGRAD][ACTIVE] projected=46/68 (frac=0.68), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:31:42,033: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=1.576e-14 mean_dot_after=1.619e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:42,033: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=6.645e-09 mean_dot_after=8.317e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:42,034: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-7.147e-14 mean_dot_after=-6.416e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:42,034: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-8.981e-09 mean_dot_after=1.389e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:42,034: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.008565 mean_dot_after=0.001871 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:42,034: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.3773 mean_dot_after=0.3731 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:42,034: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=2 (66.67%) neg_after=2 (66.67%) fixed=0 mean_dot_before=-2.316e-14 mean_dot_after=1.411e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:42,034: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=3 (100.00%) neg_after=1 (33.33%) fixed=2 mean_dot_before=-2.882e-09 mean_dot_after=2.215e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:42,034: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=3 (100.00%) neg_after=0 (0.00%) fixed=3 mean_dot_before=-0.004202 mean_dot_after=0.003556 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:42,036: [PCGRAD][AUDIT][GLOBAL] pairs=17 neg_before=12 (70.59%) \u2192 neg_after=4 (23.53%); fixed=8
+DETAIL - 2025-09-15 18:31:44,152: [GRAD-CONFLICT] Overall conflict: 55.88% (19/34).
+DETAIL - 2025-09-15 18:31:44,269: [PCGRAD][ACTIVE] projected=36/68 (frac=0.53), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:31:44,270: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=3.451e-14 mean_dot_after=3.451e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:44,270: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=2.564e-10 mean_dot_after=7.442e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:44,271: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-1.042e-14 mean_dot_after=-9.534e-15 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:44,271: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-1.62e-09 mean_dot_after=4.824e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:44,272: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.001631 mean_dot_after=0.0005057 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:44,272: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.3001 mean_dot_after=0.2976 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:44,272: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=1 (33.33%) neg_after=1 (33.33%) fixed=0 mean_dot_before=1.404e-13 mean_dot_after=1.405e-13 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:44,273: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-7.784e-10 mean_dot_after=1.241e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:44,273: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-0.002113 mean_dot_after=0.002432 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:44,273: [PCGRAD][AUDIT][GLOBAL] pairs=17 neg_before=10 (58.82%) \u2192 neg_after=2 (11.76%); fixed=8
+DETAIL - 2025-09-15 18:31:46,374: [GRAD-CONFLICT] Overall conflict: 44.12% (15/34).
+DETAIL - 2025-09-15 18:31:46,511: [PCGRAD][ACTIVE] projected=30/68 (frac=0.44), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:31:46,512: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=4.882e-13 mean_dot_after=4.888e-13 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:46,513: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=2.453e-09 mean_dot_after=3.582e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:46,513: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-4.553e-13 mean_dot_after=-3.796e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:46,514: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-2.235e-09 mean_dot_after=6.663e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:46,514: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.001281 mean_dot_after=0.001683 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:46,514: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.5561 mean_dot_after=0.5367 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:46,514: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=2 (66.67%) neg_after=1 (33.33%) fixed=1 mean_dot_before=-2.274e-14 mean_dot_after=-1.92e-16 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:46,516: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=2.323e-10 mean_dot_after=3.901e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:46,516: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-3.049e-05 mean_dot_after=0.001058 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:46,516: [PCGRAD][AUDIT][GLOBAL] pairs=17 neg_before=8 (47.06%) \u2192 neg_after=2 (11.76%); fixed=6
+INFO - 2025-09-15 18:31:46,592: [SYNC] epoch 1/2 step 9/15 acc(model0)=None
+DETAIL - 2025-09-15 18:31:48,614: [GRAD-CONFLICT] Overall conflict: 61.76% (21/34).
+DETAIL - 2025-09-15 18:31:48,696: [PCGRAD][ACTIVE] projected=41/68 (frac=0.60), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:31:48,698: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=2.558e-14 mean_dot_after=2.558e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:48,698: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-7.971e-09 mean_dot_after=2.725e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:48,699: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=2.308e-14 mean_dot_after=2.336e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:48,699: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-4.959e-10 mean_dot_after=6.716e-12 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:48,700: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.0005895 mean_dot_after=7.856e-05 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:48,700: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.7297 mean_dot_after=0.7049 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:48,701: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=2 (66.67%) neg_after=1 (33.33%) fixed=1 mean_dot_before=-5.784e-15 mean_dot_after=8.265e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:48,701: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=3.796e-10 mean_dot_after=8.849e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:48,702: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-3.656e-05 mean_dot_after=0.001495 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:48,702: [PCGRAD][AUDIT][GLOBAL] pairs=17 neg_before=10 (58.82%) \u2192 neg_after=1 (5.88%); fixed=9
+DETAIL - 2025-09-15 18:31:50,797: [GRAD-CONFLICT] Overall conflict: 44.12% (15/34).
+DETAIL - 2025-09-15 18:31:50,874: [PCGRAD][ACTIVE] projected=30/68 (frac=0.44), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:31:50,875: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-4.524e-15 mean_dot_after=-4.136e-15 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:50,876: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=1 (33.33%) neg_after=1 (33.33%) fixed=0 mean_dot_before=-2.968e-09 mean_dot_after=2.162e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:50,876: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-7.735e-15 mean_dot_after=-6.723e-15 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:50,876: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=1.629e-09 mean_dot_after=1.629e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:50,877: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.002452 mean_dot_after=0.002452 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:50,877: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.5799 mean_dot_after=0.5598 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:50,878: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=3.604e-13 mean_dot_after=3.605e-13 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:50,878: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-5.896e-10 mean_dot_after=1.009e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:50,878: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=0.0001287 mean_dot_after=0.001677 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:50,878: [PCGRAD][AUDIT][GLOBAL] pairs=17 neg_before=7 (41.18%) \u2192 neg_after=3 (17.65%); fixed=4
+DETAIL - 2025-09-15 18:31:52,982: [GRAD-CONFLICT] Overall conflict: 38.24% (13/34).
+DETAIL - 2025-09-15 18:31:53,094: [PCGRAD][ACTIVE] projected=25/68 (frac=0.37), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:31:53,095: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-3.9e-14 mean_dot_after=-2.991e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:53,095: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=1.037e-08 mean_dot_after=1.037e-08 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:53,096: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=4.199e-14 mean_dot_after=4.215e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:53,096: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=1.706e-09 mean_dot_after=1.706e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:53,097: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.00215 mean_dot_after=0.00215 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:53,097: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.7792 mean_dot_after=0.74 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:53,098: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=2 (66.67%) neg_after=2 (66.67%) fixed=0 mean_dot_before=1.823e-13 mean_dot_after=2.943e-13 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:53,098: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-3.622e-10 mean_dot_after=8.658e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:53,099: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=0.0001007 mean_dot_after=0.001282 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:53,099: [PCGRAD][AUDIT][GLOBAL] pairs=17 neg_before=7 (41.18%) \u2192 neg_after=3 (17.65%); fixed=4
+INFO - 2025-09-15 18:31:53,230: [SYNC] epoch 1/2 step 12/15 acc(model0)=None
+DETAIL - 2025-09-15 18:31:55,371: [GRAD-CONFLICT] Overall conflict: 50.00% (17/34).
+DETAIL - 2025-09-15 18:31:55,462: [PCGRAD][ACTIVE] projected=34/68 (frac=0.50), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:31:55,463: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-2.256e-14 mean_dot_after=-1.071e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:55,464: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=6.135e-09 mean_dot_after=7.42e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:55,464: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-1.003e-14 mean_dot_after=-5.227e-15 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:55,464: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-1.524e-10 mean_dot_after=1.414e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:55,464: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.0003962 mean_dot_after=0.0003722 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:55,466: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.05266 mean_dot_after=0.05259 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:55,466: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=2 (66.67%) neg_after=1 (33.33%) fixed=1 mean_dot_before=1.123e-13 mean_dot_after=1.238e-13 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:55,467: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=9.722e-10 mean_dot_after=9.722e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:55,467: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.000536 mean_dot_after=0.002116 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:55,467: [PCGRAD][AUDIT][GLOBAL] pairs=17 neg_before=9 (52.94%) \u2192 neg_after=3 (17.65%); fixed=6
+DETAIL - 2025-09-15 18:31:57,768: [GRAD-CONFLICT] Overall conflict: 38.24% (13/34).
+DETAIL - 2025-09-15 18:31:57,844: [PCGRAD][ACTIVE] projected=26/68 (frac=0.38), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:31:57,845: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-8.052e-14 mean_dot_after=-5.219e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:57,846: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-7.283e-09 mean_dot_after=3.739e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:57,846: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-3.389e-14 mean_dot_after=-2.902e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:57,846: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-1.193e-09 mean_dot_after=1.01e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:57,847: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.0006513 mean_dot_after=0.001841 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:57,847: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.1361 mean_dot_after=0.1361 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:57,847: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-8.623e-14 mean_dot_after=3.311e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:57,848: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=4.848e-10 mean_dot_after=4.848e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:57,848: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=0.001716 mean_dot_after=0.004356 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:31:57,848: [PCGRAD][AUDIT][GLOBAL] pairs=17 neg_before=9 (52.94%) \u2192 neg_after=2 (11.76%); fixed=7
+DETAIL - 2025-09-15 18:32:00,060: [GRAD-CONFLICT] Overall conflict: 64.71% (22/34).
+DETAIL - 2025-09-15 18:32:00,178: [PCGRAD][ACTIVE] projected=44/68 (frac=0.65), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:32:00,179: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-1.118e-14 mean_dot_after=-1.042e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:00,179: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-6.574e-09 mean_dot_after=9.745e-11 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:00,179: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-2.417e-13 mean_dot_after=-5.351e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:00,179: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=1.037e-09 mean_dot_after=1.037e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:00,180: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.001662 mean_dot_after=0.001662 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:00,180: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.2017 mean_dot_after=0.2015 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:00,181: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=2 (66.67%) neg_after=1 (33.33%) fixed=1 mean_dot_before=-2.916e-13 mean_dot_after=9.114e-16 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:00,181: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=3 (100.00%) neg_after=0 (0.00%) fixed=3 mean_dot_before=-1.022e-09 mean_dot_after=9.764e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:00,182: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-0.0005905 mean_dot_after=0.001848 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:00,182: [PCGRAD][AUDIT][GLOBAL] pairs=17 neg_before=12 (70.59%) \u2192 neg_after=3 (17.65%); fixed=9
+INFO - 2025-09-15 18:32:00,260: [SYNC] epoch 1/2 step 15/15 acc(model0)=None
+INFO - 2025-09-15 18:32:02,073: [SYNC] epoch 1 val_accuracy=0.1270
+DETAIL - 2025-09-15 18:32:04,099: [GRAD-CONFLICT] Overall conflict: 61.76% (21/34).
+DETAIL - 2025-09-15 18:32:04,181: [PCGRAD][ACTIVE] projected=42/68 (frac=0.62), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:32:04,183: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=1.355e-13 mean_dot_after=1.355e-13 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:04,183: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=1.008e-09 mean_dot_after=3.01e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:04,184: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=4.5e-14 mean_dot_after=4.507e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:04,184: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=2.715e-09 mean_dot_after=2.715e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:04,184: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.002942 mean_dot_after=0.002942 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:04,184: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.131 mean_dot_after=0.1312 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:04,186: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=3 (100.00%) neg_after=2 (66.67%) fixed=1 mean_dot_before=-5.634e-14 mean_dot_after=-1.217e-16 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:04,186: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=3 (100.00%) neg_after=0 (0.00%) fixed=3 mean_dot_before=-1.139e-09 mean_dot_after=1.083e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:04,186: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=3 (100.00%) neg_after=0 (0.00%) fixed=3 mean_dot_before=-0.001401 mean_dot_after=0.001826 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:04,187: [PCGRAD][AUDIT][GLOBAL] pairs=17 neg_before=11 (64.71%) \u2192 neg_after=2 (11.76%); fixed=9
+DETAIL - 2025-09-15 18:32:06,297: [GRAD-CONFLICT] Overall conflict: 64.71% (22/34).
+DETAIL - 2025-09-15 18:32:06,381: [PCGRAD][ACTIVE] projected=44/68 (frac=0.65), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:32:06,383: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-4.07e-15 mean_dot_after=-2.121e-15 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:06,384: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=3 (100.00%) neg_after=1 (33.33%) fixed=2 mean_dot_before=-1.621e-09 mean_dot_after=3.131e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:06,384: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-1.286e-13 mean_dot_after=-1.036e-13 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:06,384: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=8.393e-10 mean_dot_after=8.395e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:06,384: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.001146 mean_dot_after=0.001146 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:06,386: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.3071 mean_dot_after=0.3012 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:06,386: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=2 (66.67%) neg_after=2 (66.67%) fixed=0 mean_dot_before=9.371e-14 mean_dot_after=2.205e-13 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:06,386: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=3 (100.00%) neg_after=0 (0.00%) fixed=3 mean_dot_before=-7.443e-10 mean_dot_after=7.01e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:06,387: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=3 (100.00%) neg_after=0 (0.00%) fixed=3 mean_dot_before=-0.00311 mean_dot_after=0.003007 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:06,387: [PCGRAD][AUDIT][GLOBAL] pairs=17 neg_before=14 (82.35%) \u2192 neg_after=5 (29.41%); fixed=9
+DETAIL - 2025-09-15 18:32:08,525: [GRAD-CONFLICT] Overall conflict: 41.18% (14/34).
+DETAIL - 2025-09-15 18:32:08,638: [PCGRAD][ACTIVE] projected=29/68 (frac=0.43), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:32:08,640: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=5.378e-16 mean_dot_after=9.052e-16 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:08,640: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-1.011e-08 mean_dot_after=1.584e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:08,640: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=3.854e-14 mean_dot_after=3.854e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:08,641: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-1.704e-09 mean_dot_after=4.159e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:08,641: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.001155 mean_dot_after=0.001008 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:08,641: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.2387 mean_dot_after=0.2353 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:08,642: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=3 (100.00%) neg_after=2 (66.67%) fixed=1 mean_dot_before=-9.446e-14 mean_dot_after=-5.386e-16 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:08,642: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=1.041e-09 mean_dot_after=1.041e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:08,642: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=0.001665 mean_dot_after=0.002145 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:08,643: [PCGRAD][AUDIT][GLOBAL] pairs=17 neg_before=9 (52.94%) \u2192 neg_after=2 (11.76%); fixed=7
+INFO - 2025-09-15 18:32:08,722: [SYNC] epoch 2/2 step 3/15 acc(model0)=0.1979166716337204
+DETAIL - 2025-09-15 18:32:10,868: [GRAD-CONFLICT] Overall conflict: 64.71% (22/34).
+DETAIL - 2025-09-15 18:32:10,963: [PCGRAD][ACTIVE] projected=45/68 (frac=0.66), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:32:10,964: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-1.209e-14 mean_dot_after=-9.044e-15 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:10,965: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=3 (100.00%) neg_after=1 (33.33%) fixed=2 mean_dot_before=-2.314e-09 mean_dot_after=1.273e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:10,965: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-3.134e-14 mean_dot_after=-2.711e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:10,965: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-3.469e-09 mean_dot_after=8.961e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:10,966: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.002967 mean_dot_after=0.001335 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:10,966: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.2982 mean_dot_after=0.2913 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:10,966: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=1.593e-14 mean_dot_after=1.602e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:10,966: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-1.902e-10 mean_dot_after=8.795e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:10,967: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=0.0006267 mean_dot_after=0.003163 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:10,967: [PCGRAD][AUDIT][GLOBAL] pairs=17 neg_before=11 (64.71%) \u2192 neg_after=3 (17.65%); fixed=8
+DETAIL - 2025-09-15 18:32:13,353: [GRAD-CONFLICT] Overall conflict: 55.88% (19/34).
+DETAIL - 2025-09-15 18:32:13,470: [PCGRAD][ACTIVE] projected=38/68 (frac=0.56), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:32:13,472: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=2.975e-14 mean_dot_after=2.975e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:13,472: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-8.913e-09 mean_dot_after=3.412e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:13,472: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-1.645e-14 mean_dot_after=-1.424e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:13,473: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-1.303e-09 mean_dot_after=3.484e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:13,473: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.001274 mean_dot_after=0.0004219 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:13,474: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.7148 mean_dot_after=0.6762 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:13,474: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=6.146e-14 mean_dot_after=1.488e-13 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:13,474: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=2.643e-11 mean_dot_after=7.45e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:13,474: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=6.784e-05 mean_dot_after=0.001456 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:13,475: [PCGRAD][AUDIT][GLOBAL] pairs=17 neg_before=10 (58.82%) \u2192 neg_after=1 (5.88%); fixed=9
+DETAIL - 2025-09-15 18:32:15,945: [GRAD-CONFLICT] Overall conflict: 44.12% (15/34).
+DETAIL - 2025-09-15 18:32:16,077: [PCGRAD][ACTIVE] projected=30/68 (frac=0.44), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:32:16,079: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-3.537e-14 mean_dot_after=-2.596e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:16,080: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=2 (66.67%) neg_after=1 (33.33%) fixed=1 mean_dot_before=1.791e-09 mean_dot_after=1.327e-08 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:16,080: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=1.626e-14 mean_dot_after=1.716e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:16,081: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=4.645e-09 mean_dot_after=4.645e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:16,082: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.004831 mean_dot_after=0.004831 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:16,082: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.0308 mean_dot_after=0.03121 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:16,083: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=1 (33.33%) neg_after=1 (33.33%) fixed=0 mean_dot_before=1.187e-14 mean_dot_after=1.191e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:16,083: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=3.531e-10 mean_dot_after=4.601e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:16,084: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.0005842 mean_dot_after=0.001843 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:16,084: [PCGRAD][AUDIT][GLOBAL] pairs=17 neg_before=7 (41.18%) \u2192 neg_after=3 (17.65%); fixed=4
+INFO - 2025-09-15 18:32:16,172: [SYNC] epoch 2/2 step 6/15 acc(model0)=0.2239583283662796
+DETAIL - 2025-09-15 18:32:18,498: [GRAD-CONFLICT] Overall conflict: 52.94% (18/34).
+DETAIL - 2025-09-15 18:32:18,592: [PCGRAD][ACTIVE] projected=36/68 (frac=0.53), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:32:18,592: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-1.48e-15 mean_dot_after=-7.305e-16 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:18,593: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=7.156e-09 mean_dot_after=7.156e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:18,593: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-1.89e-14 mean_dot_after=-1.293e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:18,593: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=2.495e-09 mean_dot_after=2.495e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:18,594: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.003354 mean_dot_after=0.003354 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:18,594: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.2712 mean_dot_after=0.2673 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:18,594: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=2 (66.67%) neg_after=2 (66.67%) fixed=0 mean_dot_before=-1.623e-14 mean_dot_after=2.288e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:18,594: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=2.489e-10 mean_dot_after=3.117e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:18,595: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.0004448 mean_dot_after=0.001522 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:18,595: [PCGRAD][AUDIT][GLOBAL] pairs=17 neg_before=8 (47.06%) \u2192 neg_after=4 (23.53%); fixed=4
+DETAIL - 2025-09-15 18:32:20,773: [GRAD-CONFLICT] Overall conflict: 58.82% (20/34).
+DETAIL - 2025-09-15 18:32:20,860: [PCGRAD][ACTIVE] projected=40/68 (frac=0.59), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:32:20,861: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-9.948e-15 mean_dot_after=-8.368e-15 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:20,862: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=3.881e-10 mean_dot_after=1.97e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:20,862: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=2.591e-14 mean_dot_after=2.667e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:20,862: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=1.641e-09 mean_dot_after=1.641e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:20,863: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.00174 mean_dot_after=0.00174 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:20,863: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.295 mean_dot_after=0.2909 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:20,863: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=3 (100.00%) neg_after=1 (33.33%) fixed=2 mean_dot_before=-3.642e-14 mean_dot_after=6.066e-16 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:20,864: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-5.049e-10 mean_dot_after=6.56e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:20,864: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-0.002611 mean_dot_after=0.00327 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:20,864: [PCGRAD][AUDIT][GLOBAL] pairs=17 neg_before=10 (58.82%) \u2192 neg_after=2 (11.76%); fixed=8
+DETAIL - 2025-09-15 18:32:22,974: [GRAD-CONFLICT] Overall conflict: 47.06% (16/34).
+DETAIL - 2025-09-15 18:32:23,090: [PCGRAD][ACTIVE] projected=32/68 (frac=0.47), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:32:23,091: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=3.41e-14 mean_dot_after=3.631e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:23,091: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=1 (33.33%) neg_after=1 (33.33%) fixed=0 mean_dot_before=1.5e-08 mean_dot_after=1.543e-08 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:23,092: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=5.573e-14 mean_dot_after=5.926e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:23,092: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-5.533e-10 mean_dot_after=5.35e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:23,092: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.0005706 mean_dot_after=0.0008583 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:23,093: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.3006 mean_dot_after=0.2969 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:23,093: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-6.353e-15 mean_dot_after=1.596e-15 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:23,093: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-2.304e-10 mean_dot_after=3.535e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:23,094: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.0003175 mean_dot_after=0.001191 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:23,094: [PCGRAD][AUDIT][GLOBAL] pairs=17 neg_before=9 (52.94%) \u2192 neg_after=1 (5.88%); fixed=8
+INFO - 2025-09-15 18:32:23,172: [SYNC] epoch 2/2 step 9/15 acc(model0)=0.2387152761220932
+DETAIL - 2025-09-15 18:32:25,300: [GRAD-CONFLICT] Overall conflict: 61.76% (21/34).
+DETAIL - 2025-09-15 18:32:25,412: [PCGRAD][ACTIVE] projected=42/68 (frac=0.62), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:32:25,414: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=1.637e-15 mean_dot_after=1.644e-15 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:25,414: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-7.374e-09 mean_dot_after=7.434e-11 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:25,414: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-2.698e-15 mean_dot_after=-1.773e-15 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:25,414: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=6.452e-10 mean_dot_after=6.452e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:25,414: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.0004558 mean_dot_after=0.0006633 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:25,416: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.2904 mean_dot_after=0.2834 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:25,416: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=2 (66.67%) neg_after=1 (33.33%) fixed=1 mean_dot_before=7.423e-15 mean_dot_after=1.232e-13 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:25,416: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-4.581e-10 mean_dot_after=7.197e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:25,417: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-0.000362 mean_dot_after=0.001413 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:25,417: [PCGRAD][AUDIT][GLOBAL] pairs=17 neg_before=10 (58.82%) \u2192 neg_after=2 (11.76%); fixed=8
+DETAIL - 2025-09-15 18:32:27,555: [GRAD-CONFLICT] Overall conflict: 64.71% (22/34).
+DETAIL - 2025-09-15 18:32:27,638: [PCGRAD][ACTIVE] projected=44/68 (frac=0.65), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:32:27,639: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=3.224e-14 mean_dot_after=3.224e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:27,639: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=2 (66.67%) neg_after=1 (33.33%) fixed=1 mean_dot_before=9.042e-09 mean_dot_after=1.435e-08 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:27,639: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-1.392e-13 mean_dot_after=-1.031e-13 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:27,640: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=2.725e-10 mean_dot_after=2.725e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:27,640: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.0006694 mean_dot_after=0.0006694 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:27,640: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.1495 mean_dot_after=0.1486 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:27,641: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=3 (100.00%) neg_after=2 (66.67%) fixed=1 mean_dot_before=-2.603e-14 mean_dot_after=-7.734e-16 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:27,641: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=3 (100.00%) neg_after=0 (0.00%) fixed=3 mean_dot_before=-5.883e-10 mean_dot_after=5.72e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:27,641: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=3 (100.00%) neg_after=0 (0.00%) fixed=3 mean_dot_before=-0.001853 mean_dot_after=0.001652 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:27,642: [PCGRAD][AUDIT][GLOBAL] pairs=17 neg_before=13 (76.47%) \u2192 neg_after=4 (23.53%); fixed=9
+DETAIL - 2025-09-15 18:32:29,773: [GRAD-CONFLICT] Overall conflict: 64.71% (22/34).
+DETAIL - 2025-09-15 18:32:29,892: [PCGRAD][ACTIVE] projected=44/68 (frac=0.65), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:32:29,894: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-5.038e-14 mean_dot_after=-3.858e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:29,894: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=2 (66.67%) neg_after=1 (33.33%) fixed=1 mean_dot_before=6.852e-09 mean_dot_after=1.143e-08 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:29,894: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-8.408e-14 mean_dot_after=-6.518e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:29,894: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=4.515e-10 mean_dot_after=4.515e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:29,895: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.00041 mean_dot_after=0.0004363 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:29,895: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.1063 mean_dot_after=0.1066 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:29,896: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=2 (66.67%) neg_after=1 (33.33%) fixed=1 mean_dot_before=-1.701e-13 mean_dot_after=-1.056e-17 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:29,896: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-2.319e-10 mean_dot_after=8.108e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:29,896: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=6.09e-05 mean_dot_after=0.00184 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:29,896: [PCGRAD][AUDIT][GLOBAL] pairs=17 neg_before=10 (58.82%) \u2192 neg_after=4 (23.53%); fixed=6
+INFO - 2025-09-15 18:32:29,977: [SYNC] epoch 2/2 step 12/15 acc(model0)=0.244140625
+DETAIL - 2025-09-15 18:32:32,028: [GRAD-CONFLICT] Overall conflict: 47.06% (16/34).
+DETAIL - 2025-09-15 18:32:32,104: [PCGRAD][ACTIVE] projected=32/68 (frac=0.47), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:32:32,106: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=1 (100.00%) neg_after=1 (100.00%) fixed=0 mean_dot_before=-2.377e-14 mean_dot_after=-1.885e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:32,107: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-4.508e-09 mean_dot_after=3.977e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:32,107: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=3.108e-13 mean_dot_after=3.108e-13 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:32,107: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=5.569e-09 mean_dot_after=5.569e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:32,108: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.007343 mean_dot_after=0.007343 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:32,108: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.03973 mean_dot_after=0.03978 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:32,109: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=1 (33.33%) neg_after=1 (33.33%) fixed=0 mean_dot_before=1.918e-13 mean_dot_after=1.918e-13 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:32,109: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-3.157e-10 mean_dot_after=7.776e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:32,109: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-0.0007389 mean_dot_after=0.00133 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:32,110: [PCGRAD][AUDIT][GLOBAL] pairs=17 neg_before=9 (52.94%) \u2192 neg_after=2 (11.76%); fixed=7
+DETAIL - 2025-09-15 18:32:34,227: [GRAD-CONFLICT] Overall conflict: 41.18% (14/34).
+DETAIL - 2025-09-15 18:32:34,302: [PCGRAD][ACTIVE] projected=28/68 (frac=0.41), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:32:34,303: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=6.472e-14 mean_dot_after=6.472e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:34,303: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-7.173e-10 mean_dot_after=2.881e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:34,303: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=4.288e-14 mean_dot_after=4.408e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:34,304: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=1.395e-09 mean_dot_after=1.395e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:34,304: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=0.001385 mean_dot_after=0.00154 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:34,305: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.2697 mean_dot_after=0.2657 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:34,305: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=1.231e-13 mean_dot_after=1.231e-13 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:34,306: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-1.419e-10 mean_dot_after=2.679e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:34,306: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=1 (33.33%) neg_after=0 (0.00%) fixed=1 mean_dot_before=2.012e-05 mean_dot_after=0.001369 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:34,307: [PCGRAD][AUDIT][GLOBAL] pairs=17 neg_before=4 (23.53%) \u2192 neg_after=0 (0.00%); fixed=4
+DETAIL - 2025-09-15 18:32:36,424: [GRAD-CONFLICT] Overall conflict: 70.59% (24/34).
+DETAIL - 2025-09-15 18:32:36,542: [PCGRAD][ACTIVE] projected=47/68 (frac=0.69), mean|\u0394g|=0.000000
+DETAIL - 2025-09-15 18:32:36,543: [PCGRAD][AUDIT] layer=bn__8996713808 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=1.872e-14 mean_dot_after=2.099e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:36,544: [PCGRAD][AUDIT] layer=bn__4223183759 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-3.321e-09 mean_dot_after=3.937e-10 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:36,544: [PCGRAD][AUDIT] layer=bn__6944235048 pairs=1 neg_before=0 (0.00%) neg_after=0 (0.00%) fixed=0 mean_dot_before=4.981e-14 mean_dot_after=5.056e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:36,544: [PCGRAD][AUDIT] layer=bn__2673528151 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-1.74e-09 mean_dot_after=1.547e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:36,545: [PCGRAD][AUDIT] layer=bn__1887463666 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.001713 mean_dot_after=0.001676 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:36,545: [PCGRAD][AUDIT] layer=conv2d__9097528650 pairs=1 neg_before=1 (100.00%) neg_after=0 (0.00%) fixed=1 mean_dot_before=-0.323 mean_dot_after=0.3176 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:36,545: [PCGRAD][AUDIT] layer=bn__372707771 pairs=3 neg_before=2 (66.67%) neg_after=2 (66.67%) fixed=0 mean_dot_before=-2.868e-14 mean_dot_after=5.432e-14 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:36,546: [PCGRAD][AUDIT] layer=bn__2979567959 pairs=3 neg_before=2 (66.67%) neg_after=0 (0.00%) fixed=2 mean_dot_before=-8.748e-10 mean_dot_after=1.133e-09 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:36,546: [PCGRAD][AUDIT] layer=bn__117966246 pairs=3 neg_before=3 (100.00%) neg_after=0 (0.00%) fixed=3 mean_dot_before=-0.001511 mean_dot_after=0.001706 mean_proj_norm=nan
+DETAIL - 2025-09-15 18:32:36,546: [PCGRAD][AUDIT][GLOBAL] pairs=17 neg_before=12 (70.59%) \u2192 neg_after=2 (11.76%); fixed=10
+INFO - 2025-09-15 18:32:36,624: [SYNC] epoch 2/2 step 15/15 acc(model0)=0.2541666626930237
+INFO - 2025-09-15 18:32:38,221: [SYNC] epoch 2 val_accuracy=0.1239
+DETAIL - 2025-09-15 18:33:15,193: This iteration: [[7, 1, [2.4034414291381836, 0.12389999628067017], (5, 4, 100), 0, 1], [8, 2, [2.479581356048584, 0.1429000049829483], (4, 3, 252), 0, 1], [9, 3, [2.320510149002075, 0.10100000351667404], (3, 2, 86), 0, 1], [10, 4, [2.2398862838745117, 0.1932000070810318], (5, 4, 180), 0, 1], [11, 5, [2.467050075531006, 0.10649999976158142], (5, 4, 408), 0, 1], [12, 1, [2.380890130996704, 0.1031000018119812], (5, 4, 100), 0, 1]]
+DETAIL - 2025-09-15 18:33:15,194: Best model chosen: [10, 4, [2.2398862838745117, 0.1932000070810318], (5, 4, 180), 0, 1]
+INFO - 2025-09-15 18:33:15,230: [REGISTRY][post_iter_pop0] entries=46
+INFO - 2025-09-15 18:33:15,231: [POP] Final retrain start for individual 10 (bp 4)
+DETAIL - 2025-09-15 18:33:15,231: Starting assembling of blueprint 4.
+DETAIL - 2025-09-15 18:33:15,231: Generated assembled graph for blueprint 4: ['input-0-0', 'intermed-0-0', 'intermed-1-0', 'intermed-2-0', 'output-0-0']
+DETAIL - 2025-09-15 18:33:15,232: Added Input layer: KerasTensor(type_spec=TensorSpec(shape=(None, 32, 32, 3), dtype=tf.float32, name='input_4'), name='input_4', description="created by layer 'input_4'")
+DETAIL - 2025-09-15 18:33:15,233: [LIVE-SHARE] CREATE key=('conv2d', 3, (('activation', 'relu'), ('data_format', 'channels_last'), ('filters', 35), ('kernel_size', 1), ('padding', 'same'), ('strides', 1)), (2, 'input-0#0')) name=conv2d__3030131392 layer_id=1995864793120
+DETAIL - 2025-09-15 18:33:15,241: [LIVE-SHARE] CREATE key=('bn', 35, (), (2, 'input-0#1')) name=bn__8057067301 layer_id=1995864786832
+DETAIL - 2025-09-15 18:33:15,249: [LIVE-SHARE] CREATE key=('bn', 35, (), (0, 'intermed-0#0')) name=bn__3710565630 layer_id=1995864791008
+DETAIL - 2025-09-15 18:33:15,256: [LIVE-SHARE] CREATE key=('bn', 35, (), (2, 'intermed-1#0')) name=bn__7965784592 layer_id=1995867085440
+DETAIL - 2025-09-15 18:33:15,264: [LIVE-SHARE] CREATE key=('maxpool', 35, (('padding', 'valid'), ('pool_size', 3), ('strides', 2)), (2, 'intermed-1#1')) name=maxpool__9631299660 layer_id=1995867085488
+DETAIL - 2025-09-15 18:33:15,267: [LIVE-SHARE] CREATE key=('conv2d', 35, (('activation', 'relu'), ('data_format', 'channels_last'), ('filters', 37), ('kernel_size', 3), ('padding', 'same'), ('strides', 1)), (2, 'intermed-1#2')) name=conv2d__218563170 layer_id=1995840167392
+DETAIL - 2025-09-15 18:33:15,283: [LIVE-SHARE] CREATE key=('maxpool', 37, (('padding', 'valid'), ('pool_size', 2), ('strides', 2)), (0, 'intermed-2#0')) name=maxpool__2572150220 layer_id=1995868177696
+DETAIL - 2025-09-15 18:33:15,286: [LIVE-SHARE] CREATE key=('maxpool', 37, (('padding', 'valid'), ('pool_size', 3), ('strides', 2)), (0, 'intermed-2#1')) name=maxpool__7241508898 layer_id=1995866983008
+DETAIL - 2025-09-15 18:33:15,288: [LIVE-SHARE] CREATE key=('conv2d', 37, (('activation', 'relu'), ('data_format', 'channels_last'), ('filters', 70), ('kernel_size', 3), ('padding', 'same'), ('strides', 1)), (1, 'output-0#0')) name=conv2d__3333764578 layer_id=1995867415856
+DETAIL - 2025-09-15 18:33:15,296: [LIVE-SHARE] CREATE key=('conv2d', 70, (('activation', 'relu'), ('data_format', 'channels_last'), ('filters', 16), ('kernel_size', 3), ('padding', 'same'), ('strides', 1)), (1, 'output-0#1')) name=conv2d__7992450874 layer_id=1995864789952
+DETAIL - 2025-09-15 18:33:15,303: [LIVE-SHARE] CREATE key=('bn', 16, (), (1, 'output-0#2')) name=bn__4489220619 layer_id=1995867408320
+INFO - 2025-09-15 18:34:17,638: [POP] Final retrain scores: [2.6577980518341064, 0.18780000507831573]
