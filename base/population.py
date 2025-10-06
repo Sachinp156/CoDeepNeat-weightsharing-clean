@@ -10,10 +10,11 @@ from typing import Any, Dict, List, Optional, Tuple
 import numpy as np
 import networkx as nx
 import tensorflow as tf
-import keras
-
-from keras import layers as KL
-from keras import Model
+keras = tf.keras
+from tensorflow.keras import layers as KL
+from tensorflow.keras import Model
+from tensorflow.keras import backend as K
+from base.shared_layers import REGISTRY
 
 # local
 from base.structures import (
@@ -1336,6 +1337,10 @@ class Population:
         Final retraining (e.g. with augmentation) on the best architecture.
         """
         logging.info(f"[POP] Final retrain start for individual {indiv.name} (bp {indiv.blueprint_mark})")
+        K.clear_session()
+        if not warm_start:
+            REGISTRY.clear()    # rebuild fresh layers to avoid shape carryover
+    
         model = self.assemble_model_for_individual(indiv)
         indiv.model = model
 
