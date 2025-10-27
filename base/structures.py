@@ -301,3 +301,4 @@ class Species:
                 arr = np.array(ws)
                 self.weighted_scores = [arr[:, 0].mean(), arr[:, 1].mean()]
                 logging.log(21, f"Updated weighted scores for species {self.name}: {self.weighted_scores}")
+
