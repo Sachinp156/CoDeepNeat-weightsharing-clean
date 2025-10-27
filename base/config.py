@@ -13,3 +13,4 @@ if not hasattr(logging, "DETAIL"):
         if self.isEnabledFor(LOG_DETAIL):
             self._log(LOG_DETAIL, message, args, **kws)
     logging.Logger.detail = detail  # type: ignore
+
