@@ -1,66 +1,71 @@
 # base/shared_layers.py
 from typing import Dict, Hashable, Callable, Tuple, Iterable, Optional
 import threading
+import itertools
 from contextlib import contextmanager
 import tensorflow as tf
 
 keras = tf.keras
 
-
-# ---- key helpers -------------------------------------------------------------
-
+# ---------- key helpers ----------
 def _canon_params(d: dict) -> Tuple:
     return tuple(sorted(d.items()))
 
-
 def default_key(kind: str, in_ch: int, params: dict, extra: Tuple = ()) -> Tuple:
-    """
-    Canonical key for a layer to be shared live across models.
-    kind: e.g., "conv2d", "dense", "maxpool"
-    in_ch: input channels (shape-dependent discriminator)
-    params: layer hyperparameters (sorted)
-    extra: optional tuple to further scope sharing (species id, node tag, etc.)
-    """
     return (kind, in_ch, _canon_params(params), extra)
 
+# ---------- ignore list for sharing ----------
+_IGNORE_SHARE_TYPES = {"batchnormalization", "batch_norm", "batchnorm", "bn", "fusedbatchnorm"}
 
-# ---- registry ---------------------------------------------------------------
+def _should_ignore_sharing(component_type: Optional[str]) -> bool:
+    if not component_type:
+        return False
+    return component_type.replace(" ", "").lower() in _IGNORE_SHARE_TYPES
 
+# Unique suffix counter for non-shared layers (e.g., BN) to avoid name collisions
+_unique_nonce = itertools.count()
+
+def _unique_name(base: str) -> str:
+    return f"{base}_noshare__{next(_unique_nonce)}"
+
+# ---------- simple global counters for CREATE/REUSE ----------
+WS_CREATE = 0
+WS_REUSE  = 0
+
+def ws_reset():
+    global WS_CREATE, WS_REUSE
+    WS_CREATE = 0
+    WS_REUSE  = 0
+
+def ws_counts():
+    return WS_CREATE, WS_REUSE
+
+# ---------- registry ----------
 class SharedLayerRegistry:
-    """
-    Thread-safe map: key -> keras.layers.Layer
-    Implements mapping protocol so you can use: `key in REGISTRY`, `REGISTRY[key]`,
-    `REGISTRY[key] = layer`, and `len(REGISTRY)`.
-    """
-
     def __init__(self):
         self._layers: Dict[Hashable, keras.layers.Layer] = {}
         self._masks: Dict[tf.Variable, tf.Variable] = {}
         self._lock = threading.Lock()
 
-        # thread-local scope stack to optionally qualify keys
         self._tls = threading.local()
         self._tls.scope_stack = []
 
-    # ---------- scope helpers ----------
+    # ----- scope helpers -----
     def _ensure_stack(self):
         if not hasattr(self._tls, "scope_stack"):
             self._tls.scope_stack = []
 
     @contextmanager
     def scope(self, *scope_parts: Hashable):
-        """Context: all layers created inside will inherit this tuple in their keys."""
         self._ensure_stack()
         self._tls.scope_stack.append(tuple(scope_parts))
         try:
             yield
         finally:
-            # pop defensively
             if getattr(self._tls, "scope_stack", []):
                 self._tls.scope_stack.pop()
 
     def current_scope(self) -> Tuple:
-        """Return the flattened current scope tuple (may be empty)."""
         self._ensure_stack()
         if not self._tls.scope_stack:
             return ()
@@ -68,9 +73,8 @@ class SharedLayerRegistry:
         for t in self._tls.scope_stack:
             flat += t
         return flat
-    # -----------------------------------
 
-    # ---------- core ops ----------
+    # ----- core ops -----
     def clear(self):
         with self._lock:
             self._layers.clear()
@@ -81,17 +85,19 @@ class SharedLayerRegistry:
         key: Hashable,
         factory: Callable[[], keras.layers.Layer]
     ) -> keras.layers.Layer:
+        global WS_CREATE, WS_REUSE
         with self._lock:
             if key not in self._layers:
                 layer = factory()
                 self._layers[key] = layer
+                WS_CREATE += 1
                 print(f"[LIVE-SHARE] CREATE key={key} layer_id={id(layer)}")
             else:
                 layer = self._layers[key]
+                WS_REUSE += 1
                 print(f"[LIVE-SHARE] REUSE  key={key} layer_id={id(layer)}")
             return layer
 
-    # optional: progressive pruning helpers
     def mask_for(self, var: tf.Variable) -> tf.Variable:
         with self._lock:
             if var not in self._masks:
@@ -102,7 +108,6 @@ class SharedLayerRegistry:
             return self._masks[var]
 
     def apply_masks_after_step(self):
-        """Apply masks to all trainable variables of shared layers."""
         with self._lock:
             layers = list(self._layers.values())
         for layer in layers:
@@ -111,9 +116,8 @@ class SharedLayerRegistry:
                 if m is not None:
                     v.assign(v * m)
 
-    # ---------- python mapping protocol ----------
+    # ----- python mapping protocol -----
     def __len__(self) -> int:
-        # tolerant even if called very early
         lock = getattr(self, "_lock", None)
         if lock is None:
             return len(getattr(self, "_layers", {}))
@@ -137,15 +141,15 @@ class SharedLayerRegistry:
     def __repr__(self) -> str:
         return f"SharedLayerRegistry(size={len(self)})"
 
-    # ---------- convenience ----------
+    # ----- convenience -----
     def size(self) -> int:
         return len(self)
 
-    def keys(self) -> Iterable[Hashable]:
+    def keys(self):
         with self._lock:
             return list(self._layers.keys())
 
-    def values(self) -> Iterable[keras.layers.Layer]:
+    def values(self):
         with self._lock:
             return list(self._layers.values())
 
@@ -161,6 +165,35 @@ class SharedLayerRegistry:
                 "scopes_active": list(getattr(self._tls, "scope_stack", [])),
             }
 
-
 # Global instance
 REGISTRY = SharedLayerRegistry()
+
+# ---------- convenience used by Population._get_or_create_shared_layer ----------
+def make_or_share_layer(
+    *,
+    component_type: str,
+    in_channels: Optional[int],
+    params: dict,
+    scope_key: Tuple,
+    share_mode: str,
+    name_factory: Callable[[Tuple], str],
+    ctor: Callable[[dict, Optional[str]], keras.layers.Layer],
+):
+    """
+    Centralized policy:
+      - If BN (or listed type): do NOT share; create a fresh layer with a guaranteed-unique name.
+      - Else: share via REGISTRY using the provided key.
+    """
+    if _should_ignore_sharing(component_type):
+        lname = _unique_name(component_type.lower())
+        layer = ctor(params, lname)
+        print(f"[LIVE-SHARE][SKIP:{component_type}] name={lname} layer_id={id(layer)}")
+        return layer
+
+    key = (component_type, in_channels, _canon_params(params),
+           scope_key if share_mode != "off" else ("nonce", id(object())))
+    def factory():
+        lname = name_factory(key)
+        return ctor(params, lname)
+    return REGISTRY.get_or_create(key, factory)
+
