@@ -396,3 +396,4 @@ class GraphOperator:
         new_graph.nodes[selected]["node_def"] = node_def
 
         return new_graph
+
