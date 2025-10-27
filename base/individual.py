@@ -319,3 +319,4 @@ class Individual:
     def extract_blueprint(self):
         """(stub) back-extract a Blueprint from self.model if needed."""
         raise NotImplementedError
+
